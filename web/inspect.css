@@ -244,6 +244,120 @@
 }
 
 /* ============================================================
+   Conversion section (the Oryon story) — no stats anywhere;
+   the integrity band (D) is the trust play. Same brand idiom:
+   Geist headings, mono eyebrows/chips, solid-indigo CTA.
+   ============================================================ */
+.convert { margin-top: 96px; }
+
+/* (A) Agent hook lead */
+.convert-lead { margin-bottom: 48px; }
+.convert-lead .oryon-tag { margin-bottom: 18px; }
+.convert-lead h2 {
+  font-family: 'Geist', sans-serif; font-weight: 800; font-size: 36px;
+  letter-spacing: -0.03em; line-height: 1.1; color: var(--ink-primary);
+  margin-bottom: 16px; max-width: 22ch;
+}
+.convert-lead-sub {
+  font-size: 18px; line-height: 1.55; color: var(--ink-secondary); max-width: 68ch;
+}
+
+/* (B) Three pillars */
+.convert-pillars { align-items: stretch; }
+.convert-pillars .card { display: flex; flex-direction: column; }
+.pillar-idx {
+  font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 13px;
+  letter-spacing: 0.1em; color: var(--brand-primary); margin-bottom: 12px;
+}
+.convert-pillars .card h3 {
+  font-family: 'Geist', sans-serif; font-weight: 700; font-size: 18px;
+  letter-spacing: -0.02em; color: var(--ink-primary); margin-bottom: 8px; line-height: 1.25;
+}
+.convert-pillars .card p { font-size: 14px; line-height: 1.55; color: var(--ink-secondary); }
+.convert-pillars .card strong { color: var(--ink-primary); font-weight: 700; }
+
+/* (C) See everything */
+.convert-see { margin-top: 64px; }
+.convert-see h2 {
+  font-family: 'Geist', sans-serif; font-weight: 800; font-size: 30px;
+  letter-spacing: -0.03em; line-height: 1.15; color: var(--ink-primary);
+  margin-bottom: 12px; max-width: 26ch;
+}
+.convert-see > p {
+  font-size: 17px; line-height: 1.55; color: var(--ink-secondary);
+  max-width: 68ch; margin-bottom: 22px;
+}
+.see-points {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px;
+}
+.see-points li {
+  position: relative; padding-left: 26px;
+  font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 1.5;
+  color: var(--ink-secondary);
+}
+.see-points li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  width: 17px; height: 17px; border-radius: 5px;
+  background: var(--brand-tint); color: var(--brand-primary);
+  font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* (D) Integrity band — tinted, set apart as the trust play */
+.convert-integrity {
+  margin-top: 64px;
+  background: var(--surface-section);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 40px;
+}
+.convert-eyebrow {
+  display: inline-block;
+  font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 12px;
+  letter-spacing: 0.06em; color: var(--brand-primary); margin-bottom: 14px;
+}
+.convert-integrity h2 {
+  font-family: 'Geist', sans-serif; font-weight: 800; font-size: 30px;
+  letter-spacing: -0.03em; line-height: 1.15; color: var(--ink-primary);
+  margin-bottom: 14px; max-width: 26ch;
+}
+.convert-integrity p {
+  font-size: 16px; line-height: 1.6; color: var(--ink-secondary);
+  max-width: 72ch; margin-bottom: 22px;
+}
+.chip-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.info-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.01em;
+  color: var(--ink-secondary);
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  border-radius: 100px; padding: 8px 14px;
+}
+.info-chip::before { content: "✓"; color: var(--brand-primary); font-weight: 700; font-size: 11px; }
+
+/* (E) Final CTA */
+.convert-cta {
+  margin-top: 64px;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.convert-cta h2 {
+  font-family: 'Geist', sans-serif; font-weight: 800; font-size: 36px;
+  letter-spacing: -0.03em; color: var(--ink-primary); margin-bottom: 10px;
+}
+.convert-cta > p:not(.microcopy) {
+  font-size: 18px; line-height: 1.55; color: var(--ink-secondary);
+  max-width: 56ch; margin-bottom: 22px;
+}
+.convert-secondary {
+  margin-top: 16px;
+  font-family: 'Geist', sans-serif; font-weight: 500; font-size: 14px;
+  color: var(--ink-muted);
+}
+.convert-secondary:hover { color: var(--brand-hover); }
+
+/* ============================================================
    Responsive — mirrors style.css breakpoints
    ============================================================ */
 @media (max-width: 860px) {
@@ -252,6 +366,8 @@
   .feature-row:nth-child(even) .feature-text,
   .feature-row:nth-child(even) .feature-shot { order: 0; }
   .feature-text > p { max-width: none; }
+  .see-points { grid-template-columns: 1fr; }
+  .convert-integrity { padding: 28px; }
 }
 @media (max-width: 600px) {
   .features h2, .usecases h2, .faq h2 { font-size: 28px; }
@@ -261,4 +377,7 @@
   .trust-card { padding: 24px; }
   .trust-card p { font-size: 16px; }
   .lang-switch { order: -1; }
+  .convert-lead h2, .convert-cta h2 { font-size: 28px; }
+  .convert-see h2, .convert-integrity h2 { font-size: 24px; }
+  .convert-cta .bigcta { align-self: stretch; justify-content: center; }
 }

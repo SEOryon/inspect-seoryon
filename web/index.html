@@ -52,7 +52,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="install">
       <div class="hero-meta">
         <span class="status-dot"></span>
         <span class="status-text" data-i18n="hero_pill">Free forever · Runs locally · No signup</span>
@@ -296,30 +296,70 @@
       </div>
     </section>
 
-    <!-- Restrained upsell card — white-first, only the ORYON tag is gradient -->
-    <section class="upsell">
-      <div class="upsell-card">
-        <div class="upsell-left">
-          <span class="oryon-tag">ORYON</span>
-          <h2 data-i18n-html="up_h2">One page is the demo. <span class="brand-text">Your whole site is the product.</span></h2>
-          <p data-i18n="up_p">Inspect audits the page in front of you. SEOryon audits every page on your site continuously, tracks where you show up across ChatGPT, Perplexity, Gemini, and Google AI — then writes the articles that get you cited.</p>
-          <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=upsell&utm_campaign=trial" class="bigcta" data-i18n="up_cta">Start 30-day free trial →</a>
-          <p class="microcopy" data-i18n="up_micro">3 published articles · 1 in-depth LLM audit · Latest models · Cancel in two clicks.</p>
+    <!-- ============================================================
+         Conversion section — the full Oryon story.
+         NO stats/numbers/testimonials anywhere (deliberate): the
+         integrity block (D) is the trust play instead.
+         ============================================================ -->
+    <section class="convert" id="oryon">
+      <!-- (A) Agent hook -->
+      <div class="convert-lead">
+        <span class="oryon-tag" data-i18n="cv_a_eyebrow">MEET ORYON</span>
+        <h2 data-i18n="cv_a_h">One agent. Your entire SEO landscape, handled.</h2>
+        <p class="convert-lead-sub" data-i18n="cv_a_sub">Inspect shows you one page. Oryon runs your whole strategy. It’s a single AI agent with specialist sub-agents that watch everything that moves your rankings — what competitors publish, live SERPs, People Also Ask, keyword difficulty, trends — so you never have to guess what to write about again. You don’t chase keywords. Oryon brings the whole picture to you.</p>
+      </div>
+
+      <!-- (B) Three pillars -->
+      <div class="grid3 convert-pillars">
+        <div class="card">
+          <span class="pillar-idx">01</span>
+          <h3 data-i18n="cv_b1_h">It decides what’s worth writing</h3>
+          <p data-i18n="cv_b1_p">Oryon doesn’t just hand you a keyword list. It reads real search data — SERPs, People Also Ask, difficulty, trends, and what competitors are ranking for — and tells you the topics that will actually move your traffic, with the reasoning behind each one.</p>
         </div>
-        <div class="upsell-right">
-          <div class="upsell-stat">
-            <div class="upsell-stat-num">2,000+</div>
-            <div class="upsell-stat-label" data-i18n="up_s1">ChatGPT mentions secured for clients</div>
-          </div>
-          <div class="upsell-stat">
-            <div class="upsell-stat-num">5,000+</div>
-            <div class="upsell-stat-label" data-i18n="up_s2">Ranking articles created</div>
-          </div>
-          <div class="upsell-stat">
-            <div class="upsell-stat-num">+180%</div>
-            <div class="upsell-stat-label" data-i18n="up_s3">Avg organic growth in 6 months</div>
-          </div>
+        <div class="card">
+          <span class="pillar-idx">02</span>
+          <h3 data-i18n="cv_b2_h">You choose how hands-on you are</h3>
+          <p data-i18n-html="cv_b2_p">Run it your way. <strong>Semi-autopilot</strong> proposes finished recommendations you approve or skip with one click — and it learns from every choice you make, getting more like you over time. <strong>Full autopilot</strong> does the work end to end. We suggest starting on semi for the first months so Oryon learns your business, then handing over as much as you want. You’re always in control.</p>
         </div>
+        <div class="card">
+          <span class="pillar-idx">03</span>
+          <h3 data-i18n="cv_b3_h">Content Studio: your ideas, made to rank</h3>
+          <p data-i18n="cv_b3_p">Have something you actually want to say? Just dictate it. Speak a topic into Content Studio and Oryon turns it into a real, SEO-optimized article built on live search data — then you review and publish on your terms. Google rewards genuine content from real people, and no competitor combines it the way we do: your idea, our SEO rigor, your final say.</p>
+        </div>
+      </div>
+
+      <!-- (C) See everything — GEO + dashboard -->
+      <div class="convert-see">
+        <h2 data-i18n="cv_c_h">Know exactly where your traffic comes from — including AI.</h2>
+        <p data-i18n="cv_c_p">Search isn’t just Google anymore. Oryon tracks where you show up in AI answers — ChatGPT, Perplexity, Gemini, Google AI — and shows you which visitors arrive from an LLM versus classic search. In one dashboard you also track competitors, backlinks, and your website’s technical vitals, and watch your organic growth over time. The full landscape, in one view.</p>
+        <ul class="see-points">
+          <li data-i18n="cv_c_p1">AI citation tracking — see where LLMs cite you</li>
+          <li data-i18n="cv_c_p2">Visitor source — Google vs. ChatGPT / Perplexity / Gemini</li>
+          <li data-i18n="cv_c_p3">Competitor tracking</li>
+          <li data-i18n="cv_c_p4">Backlinks &amp; website vitals</li>
+          <li data-i18n="cv_c_p5">Organic growth over time</li>
+        </ul>
+      </div>
+
+      <!-- (D) Integrity — replaces the stats as the trust play -->
+      <div class="convert-integrity">
+        <span class="convert-eyebrow" data-i18n="cv_d_eyebrow">HOW WE WORK</span>
+        <h2 data-i18n="cv_d_h">Real organic growth. No shortcuts, no tricks.</h2>
+        <p data-i18n="cv_d_p">A lot of SEO tools cut corners — black-hat tactics, link-exchange pools, spun content. We don’t, and we never will. Oryon plays by Google’s rules and the fundamentals of good SEO, because that’s the only growth that lasts. The engine behind it is genuinely complex — that’s the point: it does the hard, legitimate work so you get results that hold up, not a penalty waiting to happen.</p>
+        <div class="chip-row">
+          <span class="info-chip" data-i18n="cv_d_c1">Plays by Google’s rules</span>
+          <span class="info-chip" data-i18n="cv_d_c2">No link-exchange pools, no black-hat</span>
+          <span class="info-chip" data-i18n="cv_d_c3">Built for durable, organic growth</span>
+        </div>
+      </div>
+
+      <!-- (E) Final CTA -->
+      <div class="convert-cta">
+        <h2 data-i18n="cv_e_h">Put your SEO on Oryon.</h2>
+        <p data-i18n="cv_e_sub">Start free. Keep full control. See what an agent watching your whole landscape can do.</p>
+        <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=convert&utm_campaign=trial" class="bigcta" data-i18n="cv_e_cta">Start your 30-day free trial →</a>
+        <p class="microcopy" data-i18n="cv_e_fine">Articles written for you · Live LLM citation audit · Latest models · Cancel in two clicks.</p>
+        <a href="#install" class="convert-secondary" data-i18n="cv_e_secondary">Or keep using Inspect free — it’s yours forever.</a>
       </div>
     </section>
 
