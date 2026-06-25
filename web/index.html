@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Set .js synchronously so scroll-reveal elements aren't hidden without JS (no flash). -->
+  <script>document.documentElement.className += " js";</script>
   <title>Inspect — Free SEO inspector for Chrome · SEOryon</title>
   <meta name="description" content="Inspect any page's SEO in one click. A free Chrome extension that audits technical, meta, content, and link signals — locally, no signup. Built by SEOryon." />
   <meta property="og:title" content="Inspect — Free SEO inspector for Chrome" />
@@ -59,7 +61,7 @@
       </div>
 
       <h1 data-i18n-html="hero_h1">Inspect any page's SEO <span class="brand-text">in one click</span>.</h1>
-      <p class="sub" data-i18n="hero_sub">Inspect is a free Chrome extension that opens a side panel on any page and audits 12 SEO signals across technical, meta, content, and links — instantly, in your browser. No signup, and nothing leaves your tab.</p>
+      <p class="sub" data-i18n="hero_sub">A free Chrome extension that audits 12 SEO signals on any page — technical, meta, content, and links — right in your browser. No signup, nothing leaves your tab.</p>
 
       <div class="hero-actions">
         <!-- TODO: Chrome Web Store URL — gradient hero CTA, same slot the "Score it →" button held on score.seoryon.com. -->
@@ -134,14 +136,14 @@
 
     <!-- Feature rows: each tab with a screenshot slot -->
     <section class="features" id="features">
-      <h2 data-i18n="feat_h2">Everything you need to inspect, in one panel</h2>
-      <p class="features-sub" data-i18n="feat_sub">Four tabs. Twelve checks. Each one color-coded pass, warn, or fail — with the fix spelled out.</p>
+      <h2 class="reveal" data-i18n="feat_h2">Everything you need to inspect, in one panel</h2>
+      <p class="features-sub reveal" data-i18n="feat_sub">Four tabs. Twelve checks. Each one color-coded pass, warn, or fail — with the fix spelled out.</p>
 
-      <div class="feature-row">
+      <div class="feature-row reveal">
         <div class="feature-text">
           <span class="feature-kicker">Technical</span>
-          <h3 data-i18n="feat1_h3">Catch the issues that block indexing</h3>
-          <p data-i18n="feat1_p">See status codes, redirects, HTTPS, canonical tags, and meta-robots at a glance — the signals that decide whether a page can rank at all.</p>
+          <h3 data-i18n="feat1_h3">Catch what blocks indexing</h3>
+          <p data-i18n="feat1_p">Status codes, redirects, HTTPS, canonicals, and meta-robots at a glance — the signals that decide whether a page can rank at all.</p>
           <ul class="feature-list">
             <li data-i18n="feat1_l1">HTTP status &amp; redirect chains</li>
             <li data-i18n="feat1_l2">Canonical &amp; meta-robots / X-Robots-Tag</li>
@@ -149,6 +151,7 @@
           </ul>
         </div>
         <figure class="feature-shot">
+          <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-technical.png -->
           <img class="shot" src="/assets/tab-technical.png" alt="Inspect Technical tab" data-i18n-alt="feat1_alt" />
           <div class="shot-ph" hidden>
@@ -158,11 +161,11 @@
         </figure>
       </div>
 
-      <div class="feature-row">
+      <div class="feature-row reveal">
         <div class="feature-text">
           <span class="feature-kicker">Meta</span>
-          <h3 data-i18n="feat2_h3">See exactly what Google and social see</h3>
-          <p data-i18n="feat2_p">Title, meta description, and Open Graph / Twitter cards — with live character counts and warnings when they're too long, too short, or missing.</p>
+          <h3 data-i18n="feat2_h3">See what Google and social see</h3>
+          <p data-i18n="feat2_p">Title, description, and Open Graph / Twitter cards — with live character counts and warnings the moment they're off.</p>
           <ul class="feature-list">
             <li data-i18n="feat2_l1">Title &amp; description length checks</li>
             <li data-i18n="feat2_l2">Open Graph &amp; Twitter card preview</li>
@@ -170,6 +173,7 @@
           </ul>
         </div>
         <figure class="feature-shot">
+          <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-meta.png -->
           <img class="shot" src="/assets/tab-meta.png" alt="Inspect Meta tab" data-i18n-alt="feat2_alt" />
           <div class="shot-ph" hidden>
@@ -179,11 +183,11 @@
         </figure>
       </div>
 
-      <div class="feature-row">
+      <div class="feature-row reveal">
         <div class="feature-text">
           <span class="feature-kicker">Content</span>
-          <h3 data-i18n="feat3_h3">Check structure the way crawlers read it</h3>
-          <p data-i18n="feat3_p">A full H1–H6 outline, image alt-text coverage, and word count — so you can spot thin content and broken hierarchy before they cost you rankings.</p>
+          <h3 data-i18n="feat3_h3">Read structure like a crawler</h3>
+          <p data-i18n="feat3_p">A full H1–H6 outline, alt-text coverage, and word count — so you catch thin content and broken hierarchy early.</p>
           <ul class="feature-list">
             <li data-i18n="feat3_l1">H1–H6 heading outline</li>
             <li data-i18n="feat3_l2">Image alt-text coverage</li>
@@ -191,6 +195,7 @@
           </ul>
         </div>
         <figure class="feature-shot">
+          <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-content.png -->
           <img class="shot" src="/assets/tab-content.png" alt="Inspect Content tab" data-i18n-alt="feat3_alt" />
           <div class="shot-ph" hidden>
@@ -200,11 +205,11 @@
         </figure>
       </div>
 
-      <div class="feature-row">
+      <div class="feature-row reveal">
         <div class="feature-text">
           <span class="feature-kicker">Links</span>
           <h3 data-i18n="feat4_h3">Map every link on the page</h3>
-          <p data-i18n="feat4_p">Internal versus external, nofollow versus followed, and a live broken-link check — with anchor text — so nothing leaks authority or 404s in silence.</p>
+          <p data-i18n="feat4_p">Internal vs external, nofollow vs followed, and a live broken-link check with anchor text.</p>
           <ul class="feature-list">
             <li data-i18n="feat4_l1">Internal vs external split</li>
             <li data-i18n="feat4_l2">Nofollow &amp; anchor text</li>
@@ -212,6 +217,7 @@
           </ul>
         </div>
         <figure class="feature-shot">
+          <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-links.png -->
           <img class="shot" src="/assets/tab-links.png" alt="Inspect Links tab" data-i18n-alt="feat4_alt" />
           <div class="shot-ph" hidden>
@@ -222,61 +228,201 @@
       </div>
     </section>
 
-    <!-- Why it's free — short trust line -->
+    <!-- Why it's free — short trust line (corrected: SEOryon guides, it does NOT edit your site) -->
     <section class="trust">
-      <div class="trust-card">
+      <div class="trust-card reveal">
         <span class="trust-kicker" data-i18n="free_kicker">Why is it free?</span>
-        <p data-i18n="free_body">Because a clean page is the best ad for what SEOryon does next. Inspect shows you what's wrong on one page; SEOryon fixes it across your whole site. No catch, no credit card, no account.</p>
+        <p data-i18n="free_body">Because a clean page is the best ad for what SEOryon does next. Inspect shows you what's wrong on one page — and exactly how to fix it. SEOryon does the same across your whole site, continuously. No catch, no credit card, no account.</p>
       </div>
     </section>
 
+    <!-- How it works — animated stepper -->
     <section class="how" id="how">
-      <h2 data-i18n="how_h2">How it works</h2>
-      <div class="grid3">
-        <div class="card">
-          <div class="num">1</div>
-          <h3 data-i18n="how1_h3">Install the extension</h3>
-          <p data-i18n="how1_p">Add Inspect to Chrome in one click. No account, no onboarding, no setup.</p>
+      <h2 class="reveal" data-i18n="how_h2">How it works</h2>
+      <div class="how-stepper reveal">
+        <div class="how-rail" aria-hidden="true"><span class="how-rail-fill"></span></div>
+        <div class="how-nodes" aria-hidden="true">
+          <span class="step-node" style="--i:0">1</span>
+          <span class="step-node" style="--i:1">2</span>
+          <span class="step-node" style="--i:2">3</span>
         </div>
-        <div class="card">
-          <div class="num">2</div>
-          <h3 data-i18n="how2_h3">Open any page</h3>
-          <p data-i18n="how2_p">Click the Inspect icon to open the side panel on whatever page you're viewing.</p>
-        </div>
-        <div class="card">
-          <div class="num">3</div>
-          <h3 data-i18n="how3_h3">Read the audit</h3>
-          <p data-i18n="how3_p">Twelve checks across four tabs, color-coded pass / warn / fail, each with the fix spelled out.</p>
+        <div class="grid3">
+          <div class="card reveal" style="--rd:0">
+            <h3 data-i18n="how1_h3">Install the extension</h3>
+            <p data-i18n="how1_p">One click from the Chrome Web Store. No account, no setup.</p>
+          </div>
+          <div class="card reveal" style="--rd:1">
+            <h3 data-i18n="how2_h3">Open any page</h3>
+            <p data-i18n="how2_p">Click the Inspect icon to open the side panel on any tab.</p>
+          </div>
+          <div class="card reveal" style="--rd:2">
+            <h3 data-i18n="how3_h3">Read the audit</h3>
+            <p data-i18n="how3_p">Twelve checks, color-coded pass / warn / fail — each with the fix.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Use cases strip -->
     <section class="usecases">
-      <h2 data-i18n="uc_h2">Built for the way you work</h2>
+      <h2 class="reveal" data-i18n="uc_h2">Built for the way you work</h2>
       <div class="grid3">
-        <div class="card">
+        <div class="card reveal" style="--rd:0">
           <span class="uc-tag" data-i18n="uc1_tag">Agencies</span>
           <h3 data-i18n="uc1_h3">Audit live on the call</h3>
-          <p data-i18n="uc1_p">Open a prospect's site on a sales call and surface quick wins in seconds — no tooling setup, no logins.</p>
+          <p data-i18n="uc1_p">Open a prospect's site mid-call and surface quick wins in seconds — no setup, no logins.</p>
         </div>
-        <div class="card">
+        <div class="card reveal" style="--rd:1">
           <span class="uc-tag" data-i18n="uc2_tag">In-house marketers</span>
           <h3 data-i18n="uc2_h3">Sanity-check before you ship</h3>
-          <p data-i18n="uc2_p">Catch missing meta, broken links, and bad canonicals on every page before it goes live.</p>
+          <p data-i18n="uc2_p">Catch missing meta, broken links, and bad canonicals before a page goes live.</p>
         </div>
-        <div class="card">
+        <div class="card reveal" style="--rd:2">
           <span class="uc-tag" data-i18n="uc3_tag">Developers</span>
           <h3 data-i18n="uc3_h3">Debug without leaving the tab</h3>
-          <p data-i18n="uc3_p">Verify status codes, canonicals, and structured signals right where you're already working.</p>
+          <p data-i18n="uc3_p">Verify status codes, canonicals, and structured signals right where you work.</p>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- ============================================================
+         Conversion section — the Oryon (paid) story.
+         The signal-hub + AI-monitor animations sell the PAID product
+         and live ONLY here. NO real client stats anywhere — the
+         monitor is an illustrative product mockup; integrity block
+         (D) is the trust play.
+         ============================================================ -->
+    <section class="convert" id="oryon">
+      <!-- (A) Agent hook + radial signal hub -->
+      <div class="convert-hero">
+        <div class="convert-lead reveal">
+          <span class="oryon-tag" data-i18n="cv_a_eyebrow">MEET ORYON</span>
+          <h2 data-i18n="cv_a_h">One agent. Your entire SEO landscape, handled.</h2>
+          <p class="convert-lead-sub" data-i18n="cv_a_sub">Inspect reads one page. Oryon watches your whole search landscape — competitors, live SERPs, trends, and more — so you never guess what to write again.</p>
+        </div>
+
+        <div class="signal-hub reveal" aria-hidden="true">
+          <svg class="hub-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <circle class="hub-orbit" cx="50" cy="50" r="40"></circle>
+            <line class="hub-line" style="--i:0" x1="50" y1="50" x2="50" y2="10" pathLength="1"></line>
+            <line class="hub-line" style="--i:1" x1="50" y1="50" x2="81" y2="25" pathLength="1"></line>
+            <line class="hub-line" style="--i:2" x1="50" y1="50" x2="89" y2="59" pathLength="1"></line>
+            <line class="hub-line" style="--i:3" x1="50" y1="50" x2="67" y2="86" pathLength="1"></line>
+            <line class="hub-line" style="--i:4" x1="50" y1="50" x2="33" y2="86" pathLength="1"></line>
+            <line class="hub-line" style="--i:5" x1="50" y1="50" x2="11" y2="59" pathLength="1"></line>
+            <line class="hub-line" style="--i:6" x1="50" y1="50" x2="19" y2="25" pathLength="1"></line>
+          </svg>
+
+          <div class="hub-core">
+            <span class="hub-halo"></span>
+            <span class="hub-ripple"></span>
+            <span class="hub-ripple hub-ripple-2"></span>
+            <span class="hub-core-disc">Oryon</span>
+          </div>
+
+          <span class="hub-node-pos" style="left:50%;top:10%">
+            <span class="hub-node" style="--i:0" data-i18n="hub_n1">Live SERPs</span>
+          </span>
+          <span class="hub-node-pos" style="left:81%;top:25%">
+            <span class="hub-node" style="--i:1" data-i18n="hub_n2">People Also Ask</span>
+          </span>
+          <span class="hub-node-pos" style="left:89%;top:59%">
+            <span class="hub-node" style="--i:2" data-i18n="hub_n3">Competitor gaps</span>
+          </span>
+          <span class="hub-node-pos" style="left:67%;top:86%">
+            <span class="hub-node" style="--i:3" data-i18n="hub_n4">Keyword difficulty</span>
+          </span>
+          <span class="hub-node-pos" style="left:33%;top:86%">
+            <span class="hub-node" style="--i:4" data-i18n="hub_n5">Trends</span>
+          </span>
+          <span class="hub-node-pos" style="left:11%;top:59%">
+            <span class="hub-node" style="--i:5" data-i18n="hub_n6">Search Console</span>
+          </span>
+          <span class="hub-node-pos" style="left:19%;top:25%">
+            <span class="hub-node" style="--i:6" data-i18n="hub_n7">Audience questions</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- (B) Three pillars — short -->
+      <div class="grid3 convert-pillars">
+        <div class="card reveal" style="--rd:0">
+          <span class="pillar-idx">01</span>
+          <h3 data-i18n="cv_b1_h">It decides what to write</h3>
+          <p data-i18n="cv_b1_p">Real search data in, ranked topic ideas out — each with the reasoning.</p>
+        </div>
+        <div class="card reveal" style="--rd:1">
+          <span class="pillar-idx">02</span>
+          <h3 data-i18n="cv_b2_h">You set the autonomy</h3>
+          <p data-i18n-html="cv_b2_p"><strong>Semi</strong> proposes, you approve in a click. <strong>Full autopilot</strong> runs it end to end.</p>
+        </div>
+        <div class="card reveal" style="--rd:2">
+          <span class="pillar-idx">03</span>
+          <h3 data-i18n="cv_b3_h">Content Studio</h3>
+          <p data-i18n="cv_b3_p">Dictate an idea; Oryon turns it into a real, search-optimized article — your final say.</p>
+        </div>
+      </div>
+
+      <!-- (C) See everything — GEO + animated AI-visibility monitor -->
+      <div class="convert-see">
+        <div class="convert-see-text reveal">
+          <h2 data-i18n="cv_c_h">Know where your traffic comes from — including AI.</h2>
+          <p data-i18n="cv_c_p">Oryon tracks where you're cited across ChatGPT, Perplexity, Gemini, Google AI, and Claude — and which visitors arrive from an LLM versus classic search.</p>
+          <div class="chip-row">
+            <span class="info-chip" data-i18n="cv_c_p1">AI citation tracking</span>
+            <span class="info-chip" data-i18n="cv_c_p2">LLM vs. classic source</span>
+            <span class="info-chip" data-i18n="cv_c_p3">Competitors · backlinks · vitals</span>
+          </div>
+        </div>
+
+        <div class="ai-monitor reveal" aria-hidden="true">
+          <div class="mon-head">
+            <span class="mon-title" data-i18n="mon_title">AI visibility</span>
+            <span class="mon-live"><span class="ping"></span><span data-i18n="mon_live">Live</span></span>
+          </div>
+          <div class="mon-bars">
+            <div class="mon-row"><span class="mon-name">ChatGPT</span><span class="mon-track"><span class="mon-fill" style="--w:82%"></span></span></div>
+            <div class="mon-row"><span class="mon-name">Perplexity</span><span class="mon-track"><span class="mon-fill" style="--w:64%"></span></span></div>
+            <div class="mon-row"><span class="mon-name">Gemini</span><span class="mon-track"><span class="mon-fill" style="--w:71%"></span></span></div>
+            <div class="mon-row"><span class="mon-name">Google AI</span><span class="mon-track"><span class="mon-fill" style="--w:58%"></span></span></div>
+            <div class="mon-row"><span class="mon-name">Claude</span><span class="mon-track"><span class="mon-fill" style="--w:49%"></span></span></div>
+          </div>
+          <div class="mon-cited">
+            <div class="mon-prompt"><span class="mon-q" data-i18n="mon_q1">"best free seo extension"</span><span class="mon-tag" data-i18n="mon_st_cited">cited</span></div>
+            <div class="mon-prompt"><span class="mon-q" data-i18n="mon_q2">"how to check meta tags"</span><span class="mon-tag" data-i18n="mon_st_cited">cited</span></div>
+            <div class="mon-prompt"><span class="mon-q" data-i18n="mon_q3">"chrome seo audit tool"</span><span class="mon-tag mon-tag-top" data-i18n="mon_st_top">top source</span></div>
+          </div>
+          <div class="mon-note" data-i18n="mon_note">Illustrative — sample data, not client results</div>
+        </div>
+      </div>
+
+      <!-- (D) Integrity — the trust play -->
+      <div class="convert-integrity reveal">
+        <span class="convert-eyebrow" data-i18n="cv_d_eyebrow">HOW WE WORK</span>
+        <h2 data-i18n="cv_d_h">Real organic growth. No shortcuts, no tricks.</h2>
+        <p data-i18n="cv_d_p">No black-hat, no link pools, no spun content — ever. Oryon plays by Google's rules, because that's the only growth that lasts.</p>
+        <div class="chip-row">
+          <span class="info-chip" data-i18n="cv_d_c1">Plays by Google's rules</span>
+          <span class="info-chip" data-i18n="cv_d_c2">No link pools, no black-hat</span>
+          <span class="info-chip" data-i18n="cv_d_c3">Built for durable growth</span>
+        </div>
+      </div>
+
+      <!-- (E) Final CTA — confident closing panel -->
+      <div class="convert-cta reveal">
+        <span class="cta-accent" aria-hidden="true"></span>
+        <h2 data-i18n="cv_e_h">Now run it across every page.</h2>
+        <p data-i18n="cv_e_sub">Start free. Keep full control the whole way.</p>
+        <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=convert&utm_campaign=trial" class="btn-gradient btn-gradient-lg" data-i18n="cv_e_cta">Start your 30-day free trial →</a>
+        <p class="microcopy" data-i18n="cv_e_fine">Articles written for you · Live LLM citation audit · Latest models · Cancel in two clicks.</p>
+        <a href="#install" class="convert-secondary" data-i18n="cv_e_secondary">Or keep using Inspect free — it's yours forever.</a>
+      </div>
+    </section>
+
+    <!-- FAQ — near the bottom, above the footer -->
     <section class="faq" id="faq">
-      <h2 data-i18n="faq_h2">Questions, answered</h2>
-      <div class="faq-list">
+      <h2 class="reveal" data-i18n="faq_h2">Questions, answered</h2>
+      <div class="faq-list reveal">
         <details class="faq-item">
           <summary data-i18n="faq1_q">Is it really free?</summary>
           <p data-i18n="faq1_a">Yes — Inspect is free forever. No trial timer, no credit card, no account. It's built by SEOryon as a genuinely useful front door to our paid platform.</p>
@@ -293,73 +439,6 @@
           <summary data-i18n="faq4_q">How is it different from SEOryon?</summary>
           <p data-i18n="faq4_a">Inspect audits one page, on demand, for free. SEOryon monitors your whole site continuously, tracks where you're cited across AI search, and writes the content that gets you ranked.</p>
         </details>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         Conversion section — the full Oryon story.
-         NO stats/numbers/testimonials anywhere (deliberate): the
-         integrity block (D) is the trust play instead.
-         ============================================================ -->
-    <section class="convert" id="oryon">
-      <!-- (A) Agent hook -->
-      <div class="convert-lead">
-        <span class="oryon-tag" data-i18n="cv_a_eyebrow">MEET ORYON</span>
-        <h2 data-i18n="cv_a_h">One agent. Your entire SEO landscape, handled.</h2>
-        <p class="convert-lead-sub" data-i18n="cv_a_sub">Inspect shows you one page. Oryon runs your whole strategy. It’s a single AI agent with specialist sub-agents that watch everything that moves your rankings — what competitors publish, live SERPs, People Also Ask, keyword difficulty, trends — so you never have to guess what to write about again. You don’t chase keywords. Oryon brings the whole picture to you.</p>
-      </div>
-
-      <!-- (B) Three pillars -->
-      <div class="grid3 convert-pillars">
-        <div class="card">
-          <span class="pillar-idx">01</span>
-          <h3 data-i18n="cv_b1_h">It decides what’s worth writing</h3>
-          <p data-i18n="cv_b1_p">Oryon doesn’t just hand you a keyword list. It reads real search data — SERPs, People Also Ask, difficulty, trends, and what competitors are ranking for — and tells you the topics that will actually move your traffic, with the reasoning behind each one.</p>
-        </div>
-        <div class="card">
-          <span class="pillar-idx">02</span>
-          <h3 data-i18n="cv_b2_h">You choose how hands-on you are</h3>
-          <p data-i18n-html="cv_b2_p">Run it your way. <strong>Semi-autopilot</strong> proposes finished recommendations you approve or skip with one click — and it learns from every choice you make, getting more like you over time. <strong>Full autopilot</strong> does the work end to end. We suggest starting on semi for the first months so Oryon learns your business, then handing over as much as you want. You’re always in control.</p>
-        </div>
-        <div class="card">
-          <span class="pillar-idx">03</span>
-          <h3 data-i18n="cv_b3_h">Content Studio: your ideas, made to rank</h3>
-          <p data-i18n="cv_b3_p">Have something you actually want to say? Just dictate it. Speak a topic into Content Studio and Oryon turns it into a real, SEO-optimized article built on live search data — then you review and publish on your terms. Google rewards genuine content from real people, and no competitor combines it the way we do: your idea, our SEO rigor, your final say.</p>
-        </div>
-      </div>
-
-      <!-- (C) See everything — GEO + dashboard -->
-      <div class="convert-see">
-        <h2 data-i18n="cv_c_h">Know exactly where your traffic comes from — including AI.</h2>
-        <p data-i18n="cv_c_p">Search isn’t just Google anymore. Oryon tracks where you show up in AI answers — ChatGPT, Perplexity, Gemini, Google AI — and shows you which visitors arrive from an LLM versus classic search. In one dashboard you also track competitors, backlinks, and your website’s technical vitals, and watch your organic growth over time. The full landscape, in one view.</p>
-        <ul class="see-points">
-          <li data-i18n="cv_c_p1">AI citation tracking — see where LLMs cite you</li>
-          <li data-i18n="cv_c_p2">Visitor source — Google vs. ChatGPT / Perplexity / Gemini</li>
-          <li data-i18n="cv_c_p3">Competitor tracking</li>
-          <li data-i18n="cv_c_p4">Backlinks &amp; website vitals</li>
-          <li data-i18n="cv_c_p5">Organic growth over time</li>
-        </ul>
-      </div>
-
-      <!-- (D) Integrity — replaces the stats as the trust play -->
-      <div class="convert-integrity">
-        <span class="convert-eyebrow" data-i18n="cv_d_eyebrow">HOW WE WORK</span>
-        <h2 data-i18n="cv_d_h">Real organic growth. No shortcuts, no tricks.</h2>
-        <p data-i18n="cv_d_p">A lot of SEO tools cut corners — black-hat tactics, link-exchange pools, spun content. We don’t, and we never will. Oryon plays by Google’s rules and the fundamentals of good SEO, because that’s the only growth that lasts. The engine behind it is genuinely complex — that’s the point: it does the hard, legitimate work so you get results that hold up, not a penalty waiting to happen.</p>
-        <div class="chip-row">
-          <span class="info-chip" data-i18n="cv_d_c1">Plays by Google’s rules</span>
-          <span class="info-chip" data-i18n="cv_d_c2">No link-exchange pools, no black-hat</span>
-          <span class="info-chip" data-i18n="cv_d_c3">Built for durable, organic growth</span>
-        </div>
-      </div>
-
-      <!-- (E) Final CTA -->
-      <div class="convert-cta">
-        <h2 data-i18n="cv_e_h">Put your SEO on Oryon.</h2>
-        <p data-i18n="cv_e_sub">Start free. Keep full control. See what an agent watching your whole landscape can do.</p>
-        <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=convert&utm_campaign=trial" class="bigcta" data-i18n="cv_e_cta">Start your 30-day free trial →</a>
-        <p class="microcopy" data-i18n="cv_e_fine">Articles written for you · Live LLM citation audit · Latest models · Cancel in two clicks.</p>
-        <a href="#install" class="convert-secondary" data-i18n="cv_e_secondary">Or keep using Inspect free — it’s yours forever.</a>
       </div>
     </section>
 
