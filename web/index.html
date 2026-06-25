@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inspect — Free SEO inspector for Chrome · SEOryon</title>
+  <meta name="description" content="Inspect any page's SEO in one click. A free Chrome extension that audits technical, meta, content, and link signals — locally, no signup. Built by SEOryon." />
+  <meta property="og:title" content="Inspect — Free SEO inspector for Chrome" />
+  <meta property="og:description" content="Audit any page's SEO in one click. Free Chrome extension. Runs locally, no signup. Built by SEOryon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://inspect.seoryon.com" />
+  <meta property="og:image" content="https://inspect.seoryon.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://inspect.seoryon.com" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/inspect.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Inspect by SEOryon",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome, Edge, Brave, Arc",
+      "url": "https://inspect.seoryon.com",
+      "description": "Free Chrome extension that audits any page's SEO — technical, meta, content, and link signals — locally in your browser, with no signup.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "creator": { "@type": "Organization", "name": "SEOryon", "url": "https://seoryon.com" }
+    }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="https://app.seoryon.com/?utm_source=inspect-tool&utm_medium=brand" class="brand" aria-label="SEOryon">
+      <!-- TODO: logo — reuses the SEOryon mark copied from score.seoryon.com (web/logo.png). -->
+      <img src="/logo.png" class="logo-img" alt="SEOryon" />
+    </a>
+    <nav class="navlinks">
+      <a href="#how" class="nav-secondary" data-i18n="nav_how">How it works</a>
+      <a href="#faq" class="nav-secondary" data-i18n="nav_faq">FAQ</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <!-- TODO: Chrome Web Store URL — placeholder href="#" until the extension is published. -->
+      <a href="#" class="cta-link js-chrome" data-i18n="cta_add">Add to Chrome — free</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-meta">
+        <span class="status-dot"></span>
+        <span class="status-text" data-i18n="hero_pill">Free forever · Runs locally · No signup</span>
+      </div>
+
+      <h1 data-i18n-html="hero_h1">Inspect any page's SEO <span class="brand-text">in one click</span>.</h1>
+      <p class="sub" data-i18n="hero_sub">Inspect is a free Chrome extension that opens a side panel on any page and audits 12 SEO signals across technical, meta, content, and links — instantly, in your browser. No signup, and nothing leaves your tab.</p>
+
+      <div class="hero-actions">
+        <!-- TODO: Chrome Web Store URL — gradient hero CTA, same slot the "Score it →" button held on score.seoryon.com. -->
+        <a href="#" class="btn-gradient js-chrome" data-i18n="cta_add">Add to Chrome — free</a>
+        <a href="#how" class="btn-ghost" data-i18n="cta_how">See how it works →</a>
+      </div>
+      <p class="microcopy" data-i18n="hero_micro">Works on any page you're viewing · Chrome &amp; Edge · Free forever — the install is the whole product.</p>
+
+      <!-- Product shot: framed Inspect side panel. Founder supplies the real PNG. -->
+      <figure class="hero-shot">
+        <!-- TODO: drop real screenshot → web/assets/panel-hero.png -->
+        <img class="shot" src="/assets/panel-hero.png" alt="Inspect side panel auditing a page" data-i18n-alt="shot_hero_alt" />
+        <div class="shot-ph" hidden>
+          <span class="shot-ph-tag">PNG</span>
+          <span class="shot-ph-label" data-i18n="shot_hero_ph">Screenshot placeholder — Inspect side panel · drop assets/panel-hero.png</span>
+        </div>
+      </figure>
+
+      <!-- "What gets checked" — Inspect's four tabs + 12 audits, dashboard-card style -->
+      <div class="signals-row tabs-row" aria-label="What Inspect checks">
+        <div class="signal-card">
+          <div class="signal-name" data-i18n="tab1_name">Technical</div>
+          <ul class="audit-list">
+            <li data-i18n="tab1_a1">HTTPS &amp; status code</li>
+            <li data-i18n="tab1_a2">Indexability &amp; robots</li>
+            <li data-i18n="tab1_a3">Canonical URL</li>
+          </ul>
+        </div>
+        <div class="signal-card">
+          <div class="signal-name" data-i18n="tab2_name">Meta</div>
+          <ul class="audit-list">
+            <li data-i18n="tab2_a1">Title tag</li>
+            <li data-i18n="tab2_a2">Meta description</li>
+            <li data-i18n="tab2_a3">Open Graph &amp; social</li>
+          </ul>
+        </div>
+        <div class="signal-card">
+          <div class="signal-name" data-i18n="tab3_name">Content</div>
+          <ul class="audit-list">
+            <li data-i18n="tab3_a1">Heading outline</li>
+            <li data-i18n="tab3_a2">Image alt text</li>
+            <li data-i18n="tab3_a3">Word count</li>
+          </ul>
+        </div>
+        <div class="signal-card">
+          <div class="signal-name" data-i18n="tab4_name">Links</div>
+          <ul class="audit-list">
+            <li data-i18n="tab4_a1">Internal links</li>
+            <li data-i18n="tab4_a2">External &amp; nofollow</li>
+            <li data-i18n="tab4_a3">Broken links</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="download-row">
+        <div class="dl-chip dl-static">
+          <span class="dl-icon" aria-hidden="true">✓</span>
+          <span class="dl-label">
+            <span class="dl-title" data-i18n="chip1_title">No signup required</span>
+            <span class="dl-sub" data-i18n="chip1_sub">Install and start inspecting in one click</span>
+          </span>
+        </div>
+        <div class="dl-chip dl-static">
+          <span class="dl-icon" aria-hidden="true">🔒</span>
+          <span class="dl-label">
+            <span class="dl-title" data-i18n="chip2_title">100% local</span>
+            <span class="dl-sub" data-i18n="chip2_sub">Audits run in your browser — nothing is sent to a server</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature rows: each tab with a screenshot slot -->
+    <section class="features" id="features">
+      <h2 data-i18n="feat_h2">Everything you need to inspect, in one panel</h2>
+      <p class="features-sub" data-i18n="feat_sub">Four tabs. Twelve checks. Each one color-coded pass, warn, or fail — with the fix spelled out.</p>
+
+      <div class="feature-row">
+        <div class="feature-text">
+          <span class="feature-kicker">Technical</span>
+          <h3 data-i18n="feat1_h3">Catch the issues that block indexing</h3>
+          <p data-i18n="feat1_p">See status codes, redirects, HTTPS, canonical tags, and meta-robots at a glance — the signals that decide whether a page can rank at all.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat1_l1">HTTP status &amp; redirect chains</li>
+            <li data-i18n="feat1_l2">Canonical &amp; meta-robots / X-Robots-Tag</li>
+            <li data-i18n="feat1_l3">HTTPS, viewport &amp; charset</li>
+          </ul>
+        </div>
+        <figure class="feature-shot">
+          <!-- TODO: drop real screenshot → web/assets/tab-technical.png -->
+          <img class="shot" src="/assets/tab-technical.png" alt="Inspect Technical tab" data-i18n-alt="feat1_alt" />
+          <div class="shot-ph" hidden>
+            <span class="shot-ph-tag">PNG</span>
+            <span class="shot-ph-label" data-i18n="feat1_ph">Screenshot placeholder · drop assets/tab-technical.png</span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-text">
+          <span class="feature-kicker">Meta</span>
+          <h3 data-i18n="feat2_h3">See exactly what Google and social see</h3>
+          <p data-i18n="feat2_p">Title, meta description, and Open Graph / Twitter cards — with live character counts and warnings when they're too long, too short, or missing.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat2_l1">Title &amp; description length checks</li>
+            <li data-i18n="feat2_l2">Open Graph &amp; Twitter card preview</li>
+            <li data-i18n="feat2_l3">Duplicate &amp; missing-tag flags</li>
+          </ul>
+        </div>
+        <figure class="feature-shot">
+          <!-- TODO: drop real screenshot → web/assets/tab-meta.png -->
+          <img class="shot" src="/assets/tab-meta.png" alt="Inspect Meta tab" data-i18n-alt="feat2_alt" />
+          <div class="shot-ph" hidden>
+            <span class="shot-ph-tag">PNG</span>
+            <span class="shot-ph-label" data-i18n="feat2_ph">Screenshot placeholder · drop assets/tab-meta.png</span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-text">
+          <span class="feature-kicker">Content</span>
+          <h3 data-i18n="feat3_h3">Check structure the way crawlers read it</h3>
+          <p data-i18n="feat3_p">A full H1–H6 outline, image alt-text coverage, and word count — so you can spot thin content and broken hierarchy before they cost you rankings.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat3_l1">H1–H6 heading outline</li>
+            <li data-i18n="feat3_l2">Image alt-text coverage</li>
+            <li data-i18n="feat3_l3">Word count &amp; thin-content flag</li>
+          </ul>
+        </div>
+        <figure class="feature-shot">
+          <!-- TODO: drop real screenshot → web/assets/tab-content.png -->
+          <img class="shot" src="/assets/tab-content.png" alt="Inspect Content tab" data-i18n-alt="feat3_alt" />
+          <div class="shot-ph" hidden>
+            <span class="shot-ph-tag">PNG</span>
+            <span class="shot-ph-label" data-i18n="feat3_ph">Screenshot placeholder · drop assets/tab-content.png</span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-text">
+          <span class="feature-kicker">Links</span>
+          <h3 data-i18n="feat4_h3">Map every link on the page</h3>
+          <p data-i18n="feat4_p">Internal versus external, nofollow versus followed, and a live broken-link check — with anchor text — so nothing leaks authority or 404s in silence.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat4_l1">Internal vs external split</li>
+            <li data-i18n="feat4_l2">Nofollow &amp; anchor text</li>
+            <li data-i18n="feat4_l3">Broken-link detection</li>
+          </ul>
+        </div>
+        <figure class="feature-shot">
+          <!-- TODO: drop real screenshot → web/assets/tab-links.png -->
+          <img class="shot" src="/assets/tab-links.png" alt="Inspect Links tab" data-i18n-alt="feat4_alt" />
+          <div class="shot-ph" hidden>
+            <span class="shot-ph-tag">PNG</span>
+            <span class="shot-ph-label" data-i18n="feat4_ph">Screenshot placeholder · drop assets/tab-links.png</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Why it's free — short trust line -->
+    <section class="trust">
+      <div class="trust-card">
+        <span class="trust-kicker" data-i18n="free_kicker">Why is it free?</span>
+        <p data-i18n="free_body">Because a clean page is the best ad for what SEOryon does next. Inspect shows you what's wrong on one page; SEOryon fixes it across your whole site. No catch, no credit card, no account.</p>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <h2 data-i18n="how_h2">How it works</h2>
+      <div class="grid3">
+        <div class="card">
+          <div class="num">1</div>
+          <h3 data-i18n="how1_h3">Install the extension</h3>
+          <p data-i18n="how1_p">Add Inspect to Chrome in one click. No account, no onboarding, no setup.</p>
+        </div>
+        <div class="card">
+          <div class="num">2</div>
+          <h3 data-i18n="how2_h3">Open any page</h3>
+          <p data-i18n="how2_p">Click the Inspect icon to open the side panel on whatever page you're viewing.</p>
+        </div>
+        <div class="card">
+          <div class="num">3</div>
+          <h3 data-i18n="how3_h3">Read the audit</h3>
+          <p data-i18n="how3_p">Twelve checks across four tabs, color-coded pass / warn / fail, each with the fix spelled out.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use cases strip -->
+    <section class="usecases">
+      <h2 data-i18n="uc_h2">Built for the way you work</h2>
+      <div class="grid3">
+        <div class="card">
+          <span class="uc-tag" data-i18n="uc1_tag">Agencies</span>
+          <h3 data-i18n="uc1_h3">Audit live on the call</h3>
+          <p data-i18n="uc1_p">Open a prospect's site on a sales call and surface quick wins in seconds — no tooling setup, no logins.</p>
+        </div>
+        <div class="card">
+          <span class="uc-tag" data-i18n="uc2_tag">In-house marketers</span>
+          <h3 data-i18n="uc2_h3">Sanity-check before you ship</h3>
+          <p data-i18n="uc2_p">Catch missing meta, broken links, and bad canonicals on every page before it goes live.</p>
+        </div>
+        <div class="card">
+          <span class="uc-tag" data-i18n="uc3_tag">Developers</span>
+          <h3 data-i18n="uc3_h3">Debug without leaving the tab</h3>
+          <p data-i18n="uc3_p">Verify status codes, canonicals, and structured signals right where you're already working.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <h2 data-i18n="faq_h2">Questions, answered</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq1_q">Is it really free?</summary>
+          <p data-i18n="faq1_a">Yes — Inspect is free forever. No trial timer, no credit card, no account. It's built by SEOryon as a genuinely useful front door to our paid platform.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2_q">Does my data leave my browser?</summary>
+          <p data-i18n="faq2_a">No. Inspect reads the page you're already viewing and runs every check locally in your browser. Nothing is uploaded to a server.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3_q">Which browsers are supported?</summary>
+          <p data-i18n="faq3_a">Chrome and any Chromium browser — Edge, Brave, Arc, and Opera. A Firefox build is on the roadmap.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4_q">How is it different from SEOryon?</summary>
+          <p data-i18n="faq4_a">Inspect audits one page, on demand, for free. SEOryon monitors your whole site continuously, tracks where you're cited across AI search, and writes the content that gets you ranked.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Restrained upsell card — white-first, only the ORYON tag is gradient -->
+    <section class="upsell">
+      <div class="upsell-card">
+        <div class="upsell-left">
+          <span class="oryon-tag">ORYON</span>
+          <h2 data-i18n-html="up_h2">One page is the demo. <span class="brand-text">Your whole site is the product.</span></h2>
+          <p data-i18n="up_p">Inspect audits the page in front of you. SEOryon audits every page on your site continuously, tracks where you show up across ChatGPT, Perplexity, Gemini, and Google AI — then writes the articles that get you cited.</p>
+          <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=upsell&utm_campaign=trial" class="bigcta" data-i18n="up_cta">Start 30-day free trial →</a>
+          <p class="microcopy" data-i18n="up_micro">3 published articles · 1 in-depth LLM audit · Latest models · Cancel in two clicks.</p>
+        </div>
+        <div class="upsell-right">
+          <div class="upsell-stat">
+            <div class="upsell-stat-num">2,000+</div>
+            <div class="upsell-stat-label" data-i18n="up_s1">ChatGPT mentions secured for clients</div>
+          </div>
+          <div class="upsell-stat">
+            <div class="upsell-stat-num">5,000+</div>
+            <div class="upsell-stat-label" data-i18n="up_s2">Ranking articles created</div>
+          </div>
+          <div class="upsell-stat">
+            <div class="upsell-stat-num">+180%</div>
+            <div class="upsell-stat-label" data-i18n="up_s3">Avg organic growth in 6 months</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <span class="wordmark sm">SEOryon</span> · <a href="https://app.seoryon.com/?utm_source=inspect-tool&utm_medium=footer">app.seoryon.com</a> · <a href="https://seoryon.com">seoryon.com</a>
+      </div>
+      <p class="microcopy" data-i18n="footer_note">Inspect runs entirely in your browser. Built by SEOryon — your organic growth engine.</p>
+    </footer>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
