@@ -9,11 +9,10 @@
 (() => {
   "use strict";
 
-  // TODO (contact): set this to the real privacy contact address once the
-  // mailbox is confirmed. It drives the "Contact:" line + mailto link below.
-  // privacy@seoryon.com is on SEOryon's own domain — confirm it's monitored,
-  // or swap it for the preferred inbox / a seoryon.com contact path.
-  const CONTACT_EMAIL = "privacy@seoryon.com";
+  // Privacy/support contact — the real monitored mailbox. Single source of
+  // truth: drives the "Contact:" line + mailto link below (and matches the
+  // static fallback in privacy.html).
+  const CONTACT_EMAIL = "support@seoryon.com";
 
   const I18N = {
     en: {

@@ -46,24 +46,27 @@
 /* ---- Hero actions ---- */
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 4px; }
 
+/* Hero/primary buttons sit at score.seoryon.com's action scale (~52px tall).
+   The Oryon gradient (135deg #9A88FF→#6D5AF6→#4A35E8) is reserved for the ONE
+   primary conversion action (the bottom .btn-gradient-lg) per the brand system. */
 .btn-gradient {
-  display: inline-flex; align-items: center;
+  display: inline-flex; align-items: center; justify-content: center;
   font-family: 'Geist', sans-serif; font-weight: 700; font-size: 15px;
   color: var(--ink-on-brand);
-  padding: 13px 24px; border: none; border-radius: 10px; cursor: pointer;
-  background: var(--oryon-gradient); background-size: 160% 160%;
+  min-height: 52px; padding: 0 26px; border: none; border-radius: 10px; cursor: pointer;
+  background: var(--oryon-gradient); background-size: 100% 100%;
   box-shadow: var(--shadow-brand-soft);
   transition: opacity 0.15s, transform 0.05s, box-shadow 0.15s;
 }
 .btn-gradient:hover { opacity: 0.93; color: var(--ink-on-brand); box-shadow: var(--shadow-brand); }
 .btn-gradient:active { transform: translateY(1px); }
-.btn-gradient-lg { font-size: 16px; padding: 16px 30px; }
+.btn-gradient-lg { font-size: 16px; padding: 0 32px; min-height: 52px; }
 
 .btn-ghost {
-  display: inline-flex; align-items: center;
+  display: inline-flex; align-items: center; justify-content: center;
   font-family: 'Geist', sans-serif; font-weight: 600; font-size: 15px;
   color: var(--brand-hover);
-  padding: 13px 18px; border-radius: 10px;
+  min-height: 52px; padding: 0 22px; border-radius: 10px;
   border: 1px solid var(--surface-border); background: var(--surface-card);
   transition: border-color 0.15s, background-color 0.15s, color 0.15s;
 }
@@ -75,9 +78,18 @@
    specificity (.cta-link/.btn-gradient + .is-soon) so it wins without !important.
    Flip back via CHROME_STORE_URL in app.js. */
 /* `.navlinks a.cta-link.is-soon` (0,3,1) is needed to beat style.css's
-   `.navlinks a.cta-link` (0,2,1); `.btn-gradient.is-soon` (0,2,0) already wins. */
-.navlinks a.cta-link.is-soon,
-.btn-gradient.is-soon {
+   `.navlinks a.cta-link` (0,2,1); `.btn-gradient.is-soon` (0,2,0) already wins.
+   Split into nav-chip vs hero-button so they can size independently. */
+.navlinks a.cta-link.is-soon {                /* nav: soft brand-tint chip, 38px */
+  height: 38px; padding: 0 15px;
+  font-size: 14px; font-weight: 600; border-radius: 10px;
+  background: var(--brand-tint);
+  color: var(--brand-hover);
+  border: 1px solid var(--brand-light);
+  box-shadow: none;
+  cursor: default;
+}
+.btn-gradient.is-soon {                        /* hero: soft brand-tint, full 52px button */
   background: var(--brand-tint);
   color: var(--brand-hover);
   border: 1px solid var(--brand-light);
@@ -95,16 +107,29 @@
   transform: none;
 }
 
+/* ---- Score-sibling polish: roomier layout + nav chips + bigger logo ---- */
+/* Wider content well (score caps at 980; Inspect's detailed screenshots want
+   more room) — still inside the 1140px topbar, character-capped headings hold. */
+main { max-width: 1080px; }
+
+/* Nav secondary chips (How it works · FAQ) — fixed 38px white-chip height to
+   match score.seoryon.com's nav chrome (style.css supplies the white bg / #E7E4F2
+   border / #3B28CB text / 10px radius; we just set the height + horizontal padding). */
+.navlinks a.nav-secondary { height: 38px; padding: 0 14px; }
+
+/* Bigger nav logo (score uses the same 30px asset; founder wants more presence). */
+.logo-img { height: 34px; }
+
 /* ---- Screenshot frames (hero + features) ---- */
 .hero-shot {
-  margin: 40px 0 8px;
-  border: 1px solid var(--surface-border); border-radius: 16px;
+  margin: 48px 0 12px;
+  border: 1px solid var(--surface-border); border-radius: 20px;
   background: var(--surface-soft-card); box-shadow: var(--shadow-card);
   overflow: hidden;
 }
 /* Image fills the frame cleanly (no fixed height → grows to the screenshot). */
 .hero-shot .shot { display: block; width: 100%; height: auto; }
-.hero-shot .shot-ph { min-height: 360px; }
+.hero-shot .shot-ph { min-height: 380px; }
 
 .shot-ph {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -126,11 +151,14 @@
   color: var(--ink-muted); max-width: 38ch;
 }
 
-/* ---- "What gets checked" — five tab cards (incl. GEO) ---- */
-.tabs-row { grid-template-columns: repeat(5, 1fr); }
-.audit-list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 5px; }
+/* ---- "What gets checked" — five tab cards (incl. GEO), roomier than score's
+   signal chips but the same family ---- */
+.tabs-row { grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 38px; }
+.tabs-row .signal-card { padding: 18px 16px; border-radius: 12px; }
+.tabs-row .signal-name { font-size: 14px; margin-bottom: 6px; }
+.audit-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; }
 .audit-list li {
-  position: relative; font-family: 'Geist Mono', monospace; font-size: 11px;
+  position: relative; font-family: 'Geist Mono', monospace; font-size: 11.5px;
   color: var(--ink-muted); letter-spacing: 0.01em; padding-left: 16px; line-height: 1.4;
 }
 .audit-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--success-text); font-size: 10px; font-weight: 700; }
@@ -183,12 +211,15 @@
   max-width: 60ch; margin-bottom: 40px;
 }
 .feature-row {
-  display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px;
-  align-items: center; padding: 28px 0;
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px;
+  align-items: center; padding: 36px 0;
 }
 .feature-row + .feature-row { border-top: 1px solid var(--surface-border); }
 .feature-row:nth-child(even) .feature-text { order: 2; }
 .feature-row:nth-child(even) .feature-shot { order: 1; }
+/* Mirror the column template on alternating rows so the screenshot always
+   gets the WIDE track (otherwise even rows would shrink the image to 1fr). */
+.feature-row:nth-child(even) { grid-template-columns: 1.4fr 1fr; }
 
 .feature-kicker {
   display: inline-block;
@@ -212,13 +243,13 @@
 }
 .feature-shot {
   position: relative;
-  border: 1px solid var(--surface-border); border-radius: 14px;
+  border: 1px solid var(--surface-border); border-radius: 18px;
   background: var(--surface-soft-card); box-shadow: var(--shadow-card); overflow: visible;
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.feature-shot > .shot, .feature-shot > .shot-ph { border-radius: 14px; overflow: hidden; }
+.feature-shot > .shot, .feature-shot > .shot-ph { border-radius: 18px; overflow: hidden; }
 .feature-shot .shot { display: block; width: 100%; height: auto; }
-.feature-shot .shot-ph { min-height: 240px; }
+.feature-shot .shot-ph { min-height: 300px; }
 .feature-shot:hover { transform: translateY(-4px); box-shadow: var(--shadow-brand-soft); border-color: var(--brand-light); }
 /* Floating decorative accent so the section breathes */
 .float-accent {
@@ -554,7 +585,8 @@
    ============================================================ */
 @media (max-width: 860px) {
   .tabs-row { grid-template-columns: repeat(2, 1fr); }
-  .feature-row { grid-template-columns: 1fr; gap: 20px; }
+  .feature-row,
+  .feature-row:nth-child(even) { grid-template-columns: 1fr; gap: 20px; }
   .feature-row:nth-child(even) .feature-text,
   .feature-row:nth-child(even) .feature-shot { order: 0; }
   .feature-text > p { max-width: none; }
@@ -582,8 +614,11 @@
   .convert-cta .btn-gradient { align-self: stretch; justify-content: center; }
   /* Topbar nav must wrap on narrow screens — otherwise the localized
      "Coming soon to Chrome" CTA (longest in DE) overflows the row. */
-  .topbar { flex-wrap: wrap; row-gap: 12px; }
+  .topbar { flex-wrap: wrap; row-gap: 12px; padding-left: 20px; padding-right: 20px; }
   .navlinks { flex-wrap: wrap; justify-content: flex-end; row-gap: 8px; }
+  /* Scale the enlarged logo + nav chips back down so they don't dominate mobile. */
+  .logo-img { height: 28px; }
+  .navlinks a.nav-secondary, .navlinks a.cta-link.is-soon { height: 34px; padding: 0 12px; font-size: 13px; }
   /* Stepper rail only makes sense across columns; stack cleanly on mobile */
   .how-nodes { grid-template-columns: repeat(3, 1fr); margin-bottom: 16px; }
   .signal-hub { max-width: 320px; }
