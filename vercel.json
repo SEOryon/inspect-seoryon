@@ -4,9 +4,11 @@
     { "src": "web/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(style\\.css|inspect\\.css|app\\.js|logo\\.png|robots\\.txt|sitemap\\.xml)", "dest": "/web/$1" },
+    { "src": "/(style\\.css|inspect\\.css|app\\.js|privacy\\.js|logo\\.png|robots\\.txt|sitemap\\.xml)", "dest": "/web/$1" },
     { "src": "/(assets/.*)", "dest": "/web/$1" },
     { "src": "/(.*\\.(png|jpg|jpeg|svg|ico|webp|gif|woff2?))", "dest": "/web/$1" },
+    { "src": "/privacy/?", "dest": "/web/privacy.html" },
+    { "src": "/privacy\\.html", "dest": "/web/privacy.html" },
     { "src": "/(.*)", "dest": "/web/index.html" }
   ]
 }

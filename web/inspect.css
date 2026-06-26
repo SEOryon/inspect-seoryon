@@ -491,6 +491,52 @@
 .faq-item p { font-size: 15px; line-height: 1.6; color: var(--ink-secondary); padding: 0 0 18px; max-width: 70ch; }
 
 /* ============================================================
+   Legal / Privacy page (own brand idiom, reuses tokens & fonts)
+   ============================================================ */
+.legal { padding: 48px 0 8px; max-width: 760px; }
+.legal h1 {
+  font-family: 'Geist', sans-serif; font-weight: 800;
+  font-size: clamp(32px, 4.4vw, 44px); line-height: 1.06; letter-spacing: -0.035em;
+  color: var(--ink-primary); margin-bottom: 12px;
+}
+.legal-updated {
+  font-family: 'Geist Mono', monospace; font-size: 12.5px; letter-spacing: 0.02em;
+  color: var(--ink-muted); margin-bottom: 24px;
+}
+.legal-lead {
+  font-size: 18px; line-height: 1.6; color: var(--ink-secondary);
+  max-width: 64ch; margin-bottom: 8px;
+}
+.legal-section { margin-top: 40px; }
+.legal-section > h2 {
+  font-family: 'Geist', sans-serif; font-weight: 700; font-size: 22px;
+  letter-spacing: -0.025em; color: var(--ink-primary); margin-bottom: 12px;
+}
+.legal-section > h3 {
+  font-family: 'Geist', sans-serif; font-weight: 600; font-size: 16px;
+  letter-spacing: -0.01em; color: var(--ink-primary); margin: 20px 0 6px;
+}
+.legal-section p { font-size: 15.5px; line-height: 1.62; color: var(--ink-secondary); max-width: 70ch; margin-bottom: 12px; }
+.legal-section p a { color: var(--brand-hover); font-weight: 500; }
+.legal-lead-strong {
+  font-size: 16px; font-weight: 600; color: var(--ink-primary);
+  background: var(--brand-tint); border: 1px solid var(--brand-light);
+  border-radius: 12px; padding: 14px 18px; margin: 4px 0 8px; max-width: 70ch;
+}
+.legal-list { list-style: none; margin: 6px 0 4px; padding: 0; display: grid; gap: 10px; max-width: 70ch; }
+.legal-list li { position: relative; padding-left: 26px; font-size: 15.5px; line-height: 1.55; color: var(--ink-secondary); }
+.legal-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 1px; width: 17px; height: 17px; border-radius: 5px;
+  background: var(--brand-tint); color: var(--brand-primary);
+  font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.legal-contact {
+  margin-top: 8px; font-size: 15.5px; line-height: 1.6; color: var(--ink-secondary);
+}
+.legal-contact a { color: var(--brand-hover); font-weight: 600; }
+
+/* ============================================================
    Reduced motion — disable decorative motion, reveal everything
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
@@ -534,6 +580,10 @@
   .convert-see-text h2, .convert-integrity h2 { font-size: 24px; }
   .convert-cta { padding: 40px 24px; }
   .convert-cta .btn-gradient { align-self: stretch; justify-content: center; }
+  /* Topbar nav must wrap on narrow screens — otherwise the localized
+     "Coming soon to Chrome" CTA (longest in DE) overflows the row. */
+  .topbar { flex-wrap: wrap; row-gap: 12px; }
+  .navlinks { flex-wrap: wrap; justify-content: flex-end; row-gap: 8px; }
   /* Stepper rail only makes sense across columns; stack cleanly on mobile */
   .how-nodes { grid-template-columns: repeat(3, 1fr); margin-bottom: 16px; }
   .signal-hub { max-width: 320px; }
