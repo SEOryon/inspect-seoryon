@@ -12,6 +12,20 @@
 (() => {
   "use strict";
 
+  // ============================================================
+  // CHROME WEB STORE — single source of truth for the install CTAs.
+  // The extension isn't published yet (store submission blocked on company
+  // registration), so every ".js-chrome" button shows a calm "Coming soon to
+  // Chrome" state instead of a dead link.
+  //
+  // TODO (one-line revert): once the listing is live, set CHROME_STORE_URL to
+  // its URL, e.g.
+  //   const CHROME_STORE_URL = "https://chromewebstore.google.com/detail/<id>";
+  // That flips every CTA back to a real "Add to Chrome — free" link (label +
+  // href + active styling). No other change needed.
+  // ============================================================
+  const CHROME_STORE_URL = null;
+
   const I18N = {
     en: {
       meta_title: "Inspect — Free SEO inspector extension for Chrome · SEOryon",
@@ -20,6 +34,7 @@
       nav_how: "How it works",
       nav_faq: "FAQ",
       cta_add: "Add to Chrome — free",
+      cta_soon: "Coming soon to Chrome",
 
       hero_pill: "Free forever · Runs locally · No signup",
       hero_h1: 'Inspect any page’s SEO <span class="brand-text">in one click</span>.',
@@ -77,6 +92,14 @@
       feat4_alt: "Inspect Links tab — link text, crawlable links, and broken-link audits",
       feat4_ph: "Screenshot placeholder · drop assets/tab-links.png",
 
+      feat5_h3: "See if AI search can cite you",
+      feat5_p: "GEO scores whether a page is structurally ready to be cited by AI answers — ChatGPT, Perplexity, Gemini, Google AI. It checks AI-crawler access, structured data, and how citable your content is, with the fix for each.",
+      feat5_l1: "AI-crawler access — llms.txt & robots (GPTBot, ClaudeBot, PerplexityBot…)",
+      feat5_l2: "Structured data — the right schema for the page type",
+      feat5_l3: "Citable-content & AI-readiness score, 0–100",
+      feat5_alt: "Inspect GEO tab — AI-readiness score, crawler access, and structured data",
+      feat5_ph: "Screenshot placeholder · drop assets/tab-geo.png",
+
       free_kicker: "Why is it free?",
       free_body: "Because the best ad for SEOryon is showing you what you’re missing. Inspect flags what’s wrong on one page and how to fix it. SEOryon does that across your whole site — then writes the blog content that lands you in Google and AI answers. We show you the data and write the content; you stay in control of your site.",
 
@@ -86,7 +109,7 @@
       how2_h3: "Open any page",
       how2_p: "Click the Inspect icon to open the side panel on any tab.",
       how3_h3: "Read the audit",
-      how3_p: "Twelve checks, color-coded pass / warn / fail — each with the fix.",
+      how3_p: "Checks across all five tabs, color-coded pass / warn / fail — each with the fix.",
 
       uc_h2: "Built for the way you work",
       uc1_tag: "Agencies", uc1_h3: "Audit live on the call",
@@ -195,6 +218,7 @@
       nav_how: "So funktioniert’s",
       nav_faq: "FAQ",
       cta_add: "Zu Chrome hinzufügen — gratis",
+      cta_soon: "Bald für Chrome",
 
       hero_pill: "Für immer gratis · Läuft lokal · Keine Anmeldung",
       hero_h1: 'Prüfe die SEO jeder Seite <span class="brand-text">mit einem Klick</span>.',
@@ -252,6 +276,14 @@
       feat4_alt: "Inspect-Tab „Links“ — Linktext, crawlbare Links und defekte Links",
       feat4_ph: "Screenshot-Platzhalter · assets/tab-links.png ablegen",
 
+      feat5_h3: "Sieh, ob die KI-Suche dich zitieren kann",
+      feat5_p: "GEO bewertet, ob eine Seite strukturell bereit ist, in KI-Antworten zitiert zu werden — ChatGPT, Perplexity, Gemini, Google AI. Es prüft den KI-Crawler-Zugang, strukturierte Daten und wie zitierbar dein Inhalt ist, jeweils mit der Lösung.",
+      feat5_l1: "KI-Crawler-Zugang — llms.txt & robots (GPTBot, ClaudeBot, PerplexityBot…)",
+      feat5_l2: "Strukturierte Daten — das passende Schema für den Seitentyp",
+      feat5_l3: "Zitierbarer Inhalt & KI-Bereitschafts-Score, 0–100",
+      feat5_alt: "Inspect-Tab „GEO“ — KI-Bereitschafts-Score, Crawler-Zugang und strukturierte Daten",
+      feat5_ph: "Screenshot-Platzhalter · assets/tab-geo.png ablegen",
+
       free_kicker: "Warum ist es kostenlos?",
       free_body: "Weil die beste Werbung für SEOryon ist, dir zu zeigen, was dir fehlt. Inspect zeigt, was auf einer Seite falsch ist und wie du es behebst. SEOryon macht das für deine ganze Website — und schreibt dann die Blog-Inhalte, die dich in Google und KI-Antworten bringen. Wir liefern die Daten und schreiben die Inhalte; die Kontrolle über deine Website behältst du.",
 
@@ -261,7 +293,7 @@
       how2_h3: "Beliebige Seite öffnen",
       how2_p: "Klicke auf das Inspect-Symbol, um das Seitenpanel in jedem Tab zu öffnen.",
       how3_h3: "Audit lesen",
-      how3_p: "Zwölf Prüfungen, farbcodiert bestanden / Warnung / Fehler — jede mit der Lösung.",
+      how3_p: "Prüfungen über alle fünf Tabs, farbcodiert bestanden / Warnung / Fehler — jede mit der Lösung.",
 
       uc_h2: "Gebaut für deine Arbeitsweise",
       uc1_tag: "Agenturen", uc1_h3: "Live im Gespräch auditieren",
@@ -370,6 +402,7 @@
       nav_how: "Comment ça marche",
       nav_faq: "FAQ",
       cta_add: "Ajouter à Chrome — gratuit",
+      cta_soon: "Bientôt sur Chrome",
 
       hero_pill: "Gratuit pour toujours · Tourne en local · Sans inscription",
       hero_h1: 'Analysez le SEO de n’importe quelle page <span class="brand-text">en un clic</span>.',
@@ -427,6 +460,14 @@
       feat4_alt: "Onglet Liens d’Inspect — texte des liens, liens explorables et liens cassés",
       feat4_ph: "Espace réservé · déposer assets/tab-links.png",
 
+      feat5_h3: "Voyez si la recherche IA peut vous citer",
+      feat5_p: "Le GEO évalue si une page est structurellement prête à être citée par les réponses IA — ChatGPT, Perplexity, Gemini, Google AI. Il vérifie l’accès des robots IA, les données structurées et à quel point votre contenu est citable, avec la correction pour chaque point.",
+      feat5_l1: "Accès des robots IA — llms.txt & robots (GPTBot, ClaudeBot, PerplexityBot…)",
+      feat5_l2: "Données structurées — le bon schéma pour le type de page",
+      feat5_l3: "Contenu citable & score de préparation IA, 0–100",
+      feat5_alt: "Onglet GEO d’Inspect — score de préparation IA, accès des robots et données structurées",
+      feat5_ph: "Espace réservé · déposer assets/tab-geo.png",
+
       free_kicker: "Pourquoi est-ce gratuit ?",
       free_body: "Parce que la meilleure publicité pour SEOryon, c’est de vous montrer ce qui vous manque. Inspect signale ce qui ne va pas sur une page et comment le corriger. SEOryon fait de même sur tout votre site — puis rédige le contenu de blog qui vous place dans Google et les réponses IA. Nous fournissons les données et écrivons le contenu ; vous gardez le contrôle de votre site.",
 
@@ -436,7 +477,7 @@
       how2_h3: "Ouvrez n’importe quelle page",
       how2_p: "Cliquez sur l’icône Inspect pour ouvrir le panneau latéral sur n’importe quel onglet.",
       how3_h3: "Lisez l’audit",
-      how3_p: "Douze vérifications, codées réussite / avertissement / échec — chacune avec la correction.",
+      how3_p: "Des vérifications sur les cinq onglets, codées réussite / avertissement / échec — chacune avec la correction.",
 
       uc_h2: "Conçu pour votre façon de travailler",
       uc1_tag: "Agences", uc1_h3: "Auditez en direct pendant l’appel",
@@ -580,7 +621,32 @@
       b.classList.toggle("active", b.getAttribute("data-lang") === lang);
     });
 
+    applyChromeCta(dict);
+
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) { /* ignore */ }
+  };
+
+  // Drive every "Add to Chrome" CTA from CHROME_STORE_URL. Until it's set, the
+  // buttons show "Coming soon to Chrome" (calm, non-clickable). When set, they
+  // become real store links. Runs on every apply() so the label tracks the locale.
+  const applyChromeCta = (dict) => {
+    document.querySelectorAll(".js-chrome").forEach((el) => {
+      if (CHROME_STORE_URL) {
+        el.textContent = dict.cta_add;
+        el.setAttribute("href", CHROME_STORE_URL);
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener noreferrer");
+        el.classList.remove("is-soon");
+        el.removeAttribute("aria-disabled");
+      } else {
+        el.textContent = dict.cta_soon;
+        el.setAttribute("href", "#");
+        el.removeAttribute("target");
+        el.removeAttribute("rel");
+        el.classList.add("is-soon");
+        el.setAttribute("aria-disabled", "true");
+      }
+    });
   };
 
   // FAQPage structured data — built once from the EN dict (single source
@@ -625,13 +691,13 @@
     if (img.complete && img.naturalWidth === 0) showPlaceholder();
   });
 
-  // Chrome CTA — placeholder until the Web Store listing is live.
+  // Chrome CTA — while CHROME_STORE_URL is null the buttons are in the
+  // "Coming soon" state (href="#"); swallow the click so they never 404.
+  // Once CHROME_STORE_URL is set, href is a real link and this guard no-ops.
   document.querySelectorAll(".js-chrome").forEach((el) => {
     el.addEventListener("click", (e) => {
-      if (el.getAttribute("href") === "#") {
+      if (!CHROME_STORE_URL || el.getAttribute("href") === "#") {
         e.preventDefault();
-        // TODO: Chrome Web Store URL — once published, set the href on
-        // every .js-chrome link and remove this guard.
       }
     });
   });

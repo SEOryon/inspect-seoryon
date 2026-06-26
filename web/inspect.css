@@ -69,6 +69,32 @@
 }
 .btn-ghost:hover { border-color: var(--brand-primary); background: var(--brand-tint); color: var(--brand-hover); }
 
+/* ---- "Coming soon to Chrome" state (extension not yet published) ----
+   Calm, on-brand secondary treatment — reads as "launching shortly", not
+   disabled/apology. Overrides the active gradient/solid CTA fills. Higher
+   specificity (.cta-link/.btn-gradient + .is-soon) so it wins without !important.
+   Flip back via CHROME_STORE_URL in app.js. */
+/* `.navlinks a.cta-link.is-soon` (0,3,1) is needed to beat style.css's
+   `.navlinks a.cta-link` (0,2,1); `.btn-gradient.is-soon` (0,2,0) already wins. */
+.navlinks a.cta-link.is-soon,
+.btn-gradient.is-soon {
+  background: var(--brand-tint);
+  color: var(--brand-hover);
+  border: 1px solid var(--brand-light);
+  box-shadow: none;
+  cursor: default;
+}
+.navlinks a.cta-link.is-soon:hover,
+.navlinks a.cta-link.is-soon:active,
+.btn-gradient.is-soon:hover,
+.btn-gradient.is-soon:active {
+  background: var(--brand-tint);
+  color: var(--brand-hover);
+  opacity: 1;
+  box-shadow: none;
+  transform: none;
+}
+
 /* ---- Screenshot frames (hero + features) ---- */
 .hero-shot {
   margin: 40px 0 8px;

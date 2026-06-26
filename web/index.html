@@ -57,7 +57,8 @@
         <button type="button" class="lang-btn" data-lang="fr">FR</button>
       </div>
       <!-- TODO: Chrome Web Store URL — placeholder href="#" until the extension is published. -->
-      <a href="#" class="cta-link js-chrome" data-i18n="cta_add">Add to Chrome — free</a>
+      <!-- "Coming soon" state until the extension is published — driven by CHROME_STORE_URL in app.js (single-line revert). -->
+      <a href="#" class="cta-link js-chrome is-soon" data-i18n="cta_add" aria-disabled="true">Coming soon to Chrome</a>
     </nav>
   </header>
 
@@ -72,8 +73,8 @@
       <p class="sub" data-i18n="hero_sub">A free Chrome extension for on-page SEO audits — check technical, meta, content, and link signals on any page, plus a GEO (AI-search readiness) score. Runs locally, no signup, nothing leaves your tab.</p>
 
       <div class="hero-actions">
-        <!-- TODO: Chrome Web Store URL — gradient hero CTA, same slot the "Score it →" button held on score.seoryon.com. -->
-        <a href="#" class="btn-gradient js-chrome" data-i18n="cta_add">Add to Chrome — free</a>
+        <!-- "Coming soon" state until the extension is published — driven by CHROME_STORE_URL in app.js (single-line revert). -->
+        <a href="#" class="btn-gradient js-chrome is-soon" data-i18n="cta_add" aria-disabled="true">Coming soon to Chrome</a>
         <a href="#how" class="btn-ghost" data-i18n="cta_how">See how it works →</a>
       </div>
       <p class="microcopy" data-i18n="hero_micro">Works on any page you're viewing · Chrome &amp; Edge · Free forever — the install is the whole product.</p>
@@ -253,6 +254,28 @@
           </div>
         </figure>
       </div>
+
+      <div class="feature-row reveal">
+        <div class="feature-text">
+          <span class="feature-kicker">GEO</span>
+          <h3 data-i18n="feat5_h3">See if AI search can cite you</h3>
+          <p data-i18n="feat5_p">GEO scores whether a page is structurally ready to be cited by AI answers — ChatGPT, Perplexity, Gemini, Google AI. It checks AI-crawler access, structured data, and how citable your content is, with the fix for each.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat5_l1">AI-crawler access — llms.txt &amp; robots (GPTBot, ClaudeBot, PerplexityBot…)</li>
+            <li data-i18n="feat5_l2">Structured data — the right schema for the page type</li>
+            <li data-i18n="feat5_l3">Citable-content &amp; AI-readiness score, 0–100</li>
+          </ul>
+        </div>
+        <figure class="feature-shot">
+          <span class="float-accent" aria-hidden="true"></span>
+          <!-- TODO: drop real screenshot → web/assets/tab-geo.png -->
+          <img class="shot" src="/assets/tab-geo.png" alt="Inspect GEO tab — AI-readiness score, crawler access, and structured data" data-i18n-alt="feat5_alt" />
+          <div class="shot-ph" hidden>
+            <span class="shot-ph-tag">PNG</span>
+            <span class="shot-ph-label" data-i18n="feat5_ph">Screenshot placeholder · drop assets/tab-geo.png</span>
+          </div>
+        </figure>
+      </div>
     </section>
 
     <!-- Why it's free — corrected: SEOryon shows the data & writes content; the user controls their site -->
@@ -284,7 +307,7 @@
           </div>
           <div class="card reveal" style="--rd:2">
             <h3 data-i18n="how3_h3">Read the audit</h3>
-            <p data-i18n="how3_p">Twelve checks, color-coded pass / warn / fail — each with the fix.</p>
+            <p data-i18n="how3_p">Checks across all five tabs, color-coded pass / warn / fail — each with the fix.</p>
           </div>
         </div>
       </div>
