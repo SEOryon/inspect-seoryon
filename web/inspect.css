@@ -108,9 +108,13 @@
 }
 
 /* ---- Score-sibling polish: roomier layout + nav chips + bigger logo ---- */
-/* Wider content well (score caps at 980; Inspect's detailed screenshots want
-   more room) — still inside the 1140px topbar, character-capped headings hold. */
-main { max-width: 1080px; }
+/* Wide content well — Inspect's detailed audit screenshots need to read at a
+   glance, so we use more of the page than score's text-only 980px. Body TEXT
+   blocks stay character-capped (see .sub / .features-sub / .feature-text p /
+   .faq-item p) so line length stays readable even though images go full-width.
+   Topbar widened to match so the nav aligns with the content edges. */
+main { max-width: 1240px; }
+.topbar { max-width: 1240px; }
 
 /* Nav secondary chips (How it works · FAQ) — fixed 38px white-chip height to
    match score.seoryon.com's nav chrome (style.css supplies the white bg / #E7E4F2
@@ -119,6 +123,11 @@ main { max-width: 1080px; }
 
 /* Bigger nav logo (score uses the same 30px asset; founder wants more presence). */
 .logo-img { height: 34px; }
+
+/* Readable line-length: the container + images go wide, but full-width body
+   TEXT blocks stay a comfortable measure (~640–720px) so lines don't run long.
+   (The ch-based caps resolve loose in Geist/Jakarta, so we pin explicit px.) */
+.sub { max-width: 660px; }
 
 /* ---- Screenshot frames (hero + features) ---- */
 .hero-shot {
@@ -208,18 +217,18 @@ main { max-width: 1080px; }
 }
 .features-sub {
   font-size: 17px; line-height: 1.55; color: var(--ink-secondary);
-  max-width: 60ch; margin-bottom: 40px;
+  max-width: 680px; margin-bottom: 40px;
 }
 .feature-row {
-  display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px;
-  align-items: center; padding: 36px 0;
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px;
+  align-items: center; padding: 40px 0;
 }
 .feature-row + .feature-row { border-top: 1px solid var(--surface-border); }
 .feature-row:nth-child(even) .feature-text { order: 2; }
 .feature-row:nth-child(even) .feature-shot { order: 1; }
 /* Mirror the column template on alternating rows so the screenshot always
    gets the WIDE track (otherwise even rows would shrink the image to 1fr). */
-.feature-row:nth-child(even) { grid-template-columns: 1.4fr 1fr; }
+.feature-row:nth-child(even) { grid-template-columns: 1.5fr 1fr; }
 
 .feature-kicker {
   display: inline-block;
@@ -268,7 +277,7 @@ main { max-width: 1080px; }
   border-radius: 16px; padding: 32px 36px; display: flex; flex-direction: column; gap: 10px;
 }
 .trust-kicker { font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.06em; color: var(--brand-primary); }
-.trust-card p { font-size: 18px; line-height: 1.55; color: var(--ink-primary); font-weight: 500; max-width: 72ch; }
+.trust-card p { font-size: 18px; line-height: 1.55; color: var(--ink-primary); font-weight: 500; max-width: 720px; }
 
 /* ============================================================
    How it works — animated stepper
@@ -325,7 +334,7 @@ main { max-width: 1080px; }
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-primary); margin-bottom: 6px;
 }
 .persona-body h3 { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: var(--ink-primary); margin-bottom: 5px; }
-.persona-body p { font-size: 14.5px; color: var(--ink-secondary); line-height: 1.55; max-width: 62ch; }
+.persona-body p { font-size: 14.5px; color: var(--ink-secondary); line-height: 1.55; max-width: 640px; }
 
 /* Shared hover life for content cards / persona rows */
 .how .grid3 .card, .persona, .convert-pillars .card {
@@ -470,7 +479,7 @@ main { max-width: 1080px; }
 }
 .convert-eyebrow { display: inline-block; font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.06em; color: var(--brand-primary); margin-bottom: 14px; }
 .convert-integrity h2 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.03em; line-height: 1.15; color: var(--ink-primary); margin-bottom: 14px; max-width: 24ch; }
-.convert-integrity p { font-size: 16px; line-height: 1.6; color: var(--ink-secondary); max-width: 64ch; margin-bottom: 22px; }
+.convert-integrity p { font-size: 16px; line-height: 1.6; color: var(--ink-secondary); max-width: 680px; margin-bottom: 22px; }
 
 /* (E) Final CTA — confident closing panel with a gradient edge */
 .convert-cta {
@@ -519,7 +528,7 @@ main { max-width: 1080px; }
 .faq-item summary:hover { color: var(--brand-hover); }
 .faq-item summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-family: 'Geist Mono', monospace; font-size: 20px; font-weight: 500; color: var(--brand-primary); transition: transform 0.2s; }
 .faq-item[open] summary::after { content: "–"; }
-.faq-item p { font-size: 15px; line-height: 1.6; color: var(--ink-secondary); padding: 0 0 18px; max-width: 70ch; }
+.faq-item p { font-size: 15px; line-height: 1.6; color: var(--ink-secondary); padding: 0 0 18px; max-width: 700px; }
 
 /* ============================================================
    Legal / Privacy page (own brand idiom, reuses tokens & fonts)
