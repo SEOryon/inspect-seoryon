@@ -14,8 +14,8 @@
 
   const I18N = {
     en: {
-      meta_title: "Inspect — Free SEO inspector for Chrome · SEOryon",
-      meta_desc: "Inspect any page's SEO in one click. A free Chrome extension that audits technical, meta, content, and link signals — locally, no signup. Built by SEOryon.",
+      meta_title: "Inspect — Free SEO inspector extension for Chrome · SEOryon",
+      meta_desc: "Audit any page's on-page SEO in one click — a free Chrome extension checking technical, meta, content & link signals plus GEO (AI-search) readiness. Meta-tag checker, broken-link checker, runs locally, no signup. By SEOryon.",
 
       nav_how: "How it works",
       nav_faq: "FAQ",
@@ -23,7 +23,8 @@
 
       hero_pill: "Free forever · Runs locally · No signup",
       hero_h1: 'Inspect any page’s SEO <span class="brand-text">in one click</span>.',
-      hero_sub: "A free Chrome extension that audits 12 SEO signals on any page — technical, meta, content, and links — right in your browser. No signup, nothing leaves your tab.",
+      hero_sub: "A free Chrome extension for on-page SEO audits — check technical, meta, content, and link signals on any page, plus a GEO (AI-search readiness) score. Runs locally, no signup, nothing leaves your tab.",
+      browsers_label: "Works on",
       cta_how: "See how it works →",
       hero_micro: "Works on any page you’re viewing · Chrome & Edge · Free forever — the install is the whole product.",
 
@@ -34,6 +35,7 @@
       tab2_name: "Meta", tab2_a1: "Title tag", tab2_a2: "Meta description", tab2_a3: "Canonical",
       tab3_name: "Content", tab3_a1: "Alt text", tab3_a2: "Headings", tab3_a3: "Readability",
       tab4_name: "Links", tab4_a1: "Link text", tab4_a2: "Crawlable links", tab4_a3: "Broken links",
+      tab5_name: "GEO", tab5_a1: "llms.txt", tab5_a2: "AI crawlers", tab5_a3: "Citable content",
 
       chip1_title: "No signup required",
       chip1_sub: "Install and start inspecting in one click",
@@ -41,7 +43,7 @@
       chip2_sub: "Audits run in your browser — nothing is sent to a server",
 
       feat_h2: "Everything you need to inspect, in one panel",
-      feat_sub: "Four tabs. Twelve checks. Each one color-coded pass, warn, or fail — with the fix spelled out.",
+      feat_sub: "One on-page SEO audit across five tabs — technical, meta, content, links, and a GEO (AI-search readiness) score. Each check is color-coded pass, warn, or fail, with the fix spelled out.",
 
       feat1_h3: "Catch what blocks indexing",
       feat1_p: "Crawlability, canonicals, hreflang, and viewport at a glance — the signals that decide whether a page can rank at all.",
@@ -52,7 +54,7 @@
       feat1_ph: "Screenshot placeholder · drop assets/tab-technical.png",
 
       feat2_h3: "See what Google and social see",
-      feat2_p: "Title, description, and Open Graph / Twitter cards — with live character counts and warnings the moment they’re off.",
+      feat2_p: "Title, description, and Open Graph / Twitter cards — a built-in meta-tag checker with live character counts and warnings the moment they’re off.",
       feat2_l1: "Title & description length checks",
       feat2_l2: "Open Graph & Twitter card preview",
       feat2_l3: "Duplicate & missing-tag flags",
@@ -68,7 +70,7 @@
       feat3_ph: "Screenshot placeholder · drop assets/tab-content.png",
 
       feat4_h3: "Map every link on the page",
-      feat4_p: "Internal vs external, generic anchor text, crawlable links, and a live broken-link check.",
+      feat4_p: "Internal vs external, generic anchor text, crawlable links, and a live broken-link checker — so nothing leaks authority or 404s in silence.",
       feat4_l1: "Internal vs external split",
       feat4_l2: "Anchor text & crawlable links",
       feat4_l3: "Broken-link detection",
@@ -132,8 +134,8 @@
 
       cv_e_h: "Rank in Google. Get cited by AI.",
       cv_e_sub: "SEOryon does the SEO and writes the content — you keep control of your site.",
-      cv_e_cta: "Start your 30-day free trial →",
-      cv_e_fine: "Articles written for you · Live LLM citation audit · Latest models · Cancel in two clicks.",
+      cv_e_cta: "Start your 3-day free trial →",
+      cv_e_fine: "3-day free trial · 3 published articles · 1 in-depth LLM/GEO audit · Cancel in two clicks.",
       cv_e_secondary: "Or keep using Inspect free — it’s yours forever.",
 
       faq_h2: "Questions, answered",
@@ -153,16 +155,16 @@
       faq4_a: "Inspect audits one page, on demand, for free. SEOryon works across your whole site continuously, tracks where you’re cited in AI search, and writes the content that gets you found.",
 
       faq5_q: "How is SEOryon different from a keyword tool or an AI writer?",
-      faq5_a: "Keyword tools hand you a list and stop; AI writers spit out generic text. SEOryon reads live search data, decides what’s worth writing and why, then writes content built to rank — research and writing in one loop.",
+      faq5_a: "Keyword tools stop at a list — they tell you what people search, then leave the hard part (deciding what’s actually worth writing, and writing it) to you. AI writers do the opposite: they generate text fast, but with no grounding in live search data, so you get generic articles that don’t rank. SEOryon closes the loop. A single agent reads real search signals — live SERPs, People Also Ask, keyword difficulty, competitor gaps, trends — decides which topics will actually move your traffic and why, then writes each article on that data and checks the facts. You get the research of a keyword tool and the output of a writer, connected, instead of paying for both and stitching them together yourself.",
       faq6_q: "Do I still need Ahrefs or Semrush?",
-      faq6_a: "Most teams don’t. SEOryon tracks the rankings, competitors, backlinks, and site vitals those tools show — then acts on them by publishing content. Keep them if you like; SEOryon is built to replace the busywork.",
+      faq6_a: "For most teams, no. SEOryon already tracks the things those tools surface — your rankings, your competitors, your backlinks, and your site’s technical health — but instead of stopping at a dashboard you have to act on, it acts: it turns those signals into published content that ranks. Ahrefs and Semrush are reference libraries; SEOryon is the team that reads the library and does the work. Keep them if you love the data, but you won’t need them to grow.",
       faq7_q: "Why SEOryon instead of an agency or doing it manually?",
-      faq7_a: "An agency is slow and expensive; manual SEO eats your week. SEOryon runs the research-to-publish loop continuously at a fraction of the cost — and you approve everything.",
+      faq7_a: "An agency is expensive, slow, and you’re never quite sure what you’re paying for; doing SEO yourself eats hours every week on research, writing, and tracking. SEOryon runs that entire research-to-publish loop continuously, for a fraction of an agency retainer — and unlike an agency, nothing is a black box: you see every recommendation and approve every article. You get agency-scale output with full control and none of the busywork.",
 
       faq8_q: "What is GEO (generative engine optimization)?",
-      faq8_a: "GEO is optimizing to be cited in AI answers — ChatGPT, Perplexity, Gemini, Google AI — not just the ten blue links. As people ask AI instead of searching, being the source it quotes is the new front page.",
+      faq8_a: "GEO is optimizing to be the source AI answers cite — in ChatGPT, Perplexity, Gemini, and Google’s AI overviews — instead of just ranking in the ten blue links. More and more people ask an AI assistant instead of scrolling a results page, and the assistant quotes a handful of sources. GEO is about being one of those sources: clear structure, genuinely useful answers, the right markup, and crawler access for AI bots. SEOryon writes for it and tracks where you’re already being cited.",
       faq9_q: "How do I get cited in ChatGPT, Perplexity, and Google AI?",
-      faq9_a: "Publish clear, well-structured, genuinely useful content that answers real questions — exactly what LLMs quote. SEOryon writes for that, and tracks where you’re already being cited.",
+      faq9_a: "You earn citations the way you earn rankings — by being the clearest, most useful answer to a real question — but AI rewards a few extra things: well-structured content it can extract (headings, concise answers, lists, FAQ markup), demonstrated expertise and trust signals, and a site that lets AI crawlers in. SEOryon’s free Inspect tool shows whether a page is structurally ready, and the SEOryon platform writes content built to be cited and tracks where you actually appear.",
       faq10_q: "How is ranking in AI answers different from ranking in Google?",
       faq10_a: "Google ranks pages; AI answers cite sources inside a generated reply. The fundamentals overlap — quality, structure, authority — but AI rewards content that directly answers the question. SEOryon optimizes for both.",
 
@@ -175,8 +177,8 @@
       faq14_q: "Who controls what gets published?",
       faq14_a: "You do. On semi-autopilot you approve every piece with one click; on full autopilot SEOryon publishes on your rules. Either way, nothing goes live without your say.",
 
-      faq15_q: "What’s included in the 30-day free trial?",
-      faq15_a: "Published articles written for you, an in-depth LLM citation audit, the latest models, and full access — cancel in two clicks.",
+      faq15_q: "What’s included in the free trial?",
+      faq15_a: "A 3-day free trial: 3 published articles written for you and 1 in-depth LLM/GEO audit, with full access. Cancel in two clicks — no card gymnastics.",
       faq16_q: "Semi-autopilot vs. full autopilot — what’s the difference?",
       faq16_a: "Semi proposes finished recommendations you approve or skip in a click, learning your taste over time. Full autopilot runs the whole loop end to end. Start on semi, hand over as much as you want.",
       faq17_q: "Which platforms and languages do you support?",
@@ -187,8 +189,8 @@
 
     /* ---- DE · AI-translated, PENDING NATIVE REVIEW ---- */
     de: {
-      meta_title: "Inspect — Kostenloser SEO-Inspektor für Chrome · SEOryon",
-      meta_desc: "Prüfe die SEO jeder Seite mit einem Klick. Eine kostenlose Chrome-Erweiterung, die technische, Meta-, Inhalts- und Link-Signale auditiert — lokal, ohne Anmeldung. Von SEOryon.",
+      meta_title: "Inspect — Kostenlose SEO-Inspektor-Erweiterung für Chrome · SEOryon",
+      meta_desc: "Prüfe die On-Page-SEO jeder Seite mit einem Klick — eine kostenlose Chrome-Erweiterung für technische, Meta-, Inhalts- und Link-Signale plus GEO-Bereitschaft (KI-Suche). Meta-Tag- & Defekte-Links-Checker, lokal, ohne Anmeldung. Von SEOryon.",
 
       nav_how: "So funktioniert’s",
       nav_faq: "FAQ",
@@ -196,7 +198,8 @@
 
       hero_pill: "Für immer gratis · Läuft lokal · Keine Anmeldung",
       hero_h1: 'Prüfe die SEO jeder Seite <span class="brand-text">mit einem Klick</span>.',
-      hero_sub: "Eine kostenlose Chrome-Erweiterung, die 12 SEO-Signale auf jeder Seite auditiert — Technik, Meta, Inhalt und Links — direkt in deinem Browser. Keine Anmeldung, nichts verlässt deinen Tab.",
+      hero_sub: "Eine kostenlose Chrome-Erweiterung für On-Page-SEO-Audits — prüfe technische, Meta-, Inhalts- und Link-Signale auf jeder Seite, plus einen GEO-Score (KI-Such-Bereitschaft). Läuft lokal, keine Anmeldung, nichts verlässt deinen Tab.",
+      browsers_label: "Läuft in",
       cta_how: "So funktioniert’s ansehen →",
       hero_micro: "Funktioniert auf jeder geöffneten Seite · Chrome & Edge · Für immer gratis — die Installation ist das ganze Produkt.",
 
@@ -207,6 +210,7 @@
       tab2_name: "Meta", tab2_a1: "Title-Tag", tab2_a2: "Meta-Beschreibung", tab2_a3: "Canonical",
       tab3_name: "Inhalt", tab3_a1: "Alt-Text", tab3_a2: "Überschriften", tab3_a3: "Lesbarkeit",
       tab4_name: "Links", tab4_a1: "Linktext", tab4_a2: "Crawlbare Links", tab4_a3: "Defekte Links",
+      tab5_name: "GEO", tab5_a1: "llms.txt", tab5_a2: "KI-Crawler", tab5_a3: "Zitierbarer Inhalt",
 
       chip1_title: "Keine Anmeldung nötig",
       chip1_sub: "Installieren und mit einem Klick prüfen",
@@ -214,7 +218,7 @@
       chip2_sub: "Audits laufen im Browser — nichts wird an einen Server gesendet",
 
       feat_h2: "Alles, was du brauchst, in einem Panel",
-      feat_sub: "Vier Tabs. Zwölf Prüfungen. Jede farbcodiert als bestanden, Warnung oder Fehler — mit ausformulierter Lösung.",
+      feat_sub: "Ein On-Page-SEO-Audit über fünf Tabs — Technik, Meta, Inhalt, Links und ein GEO-Score (KI-Such-Bereitschaft). Jede Prüfung farbcodiert als bestanden, Warnung oder Fehler — mit ausformulierter Lösung.",
 
       feat1_h3: "Erkenne, was die Indexierung blockiert",
       feat1_p: "Crawlbarkeit, Canonicals, Hreflang und Viewport auf einen Blick — die Signale, die entscheiden, ob eine Seite überhaupt ranken kann.",
@@ -225,7 +229,7 @@
       feat1_ph: "Screenshot-Platzhalter · assets/tab-technical.png ablegen",
 
       feat2_h3: "Sieh, was Google und Social sehen",
-      feat2_p: "Title, Beschreibung und Open-Graph- / Twitter-Cards — mit Live-Zeichenzählung und Warnungen, sobald etwas nicht stimmt.",
+      feat2_p: "Title, Beschreibung und Open-Graph- / Twitter-Cards — ein eingebauter Meta-Tag-Checker mit Live-Zeichenzählung und Warnungen, sobald etwas nicht stimmt.",
       feat2_l1: "Längenprüfung für Title & Beschreibung",
       feat2_l2: "Vorschau von Open Graph & Twitter-Card",
       feat2_l3: "Markierung von Duplikaten & fehlenden Tags",
@@ -241,7 +245,7 @@
       feat3_ph: "Screenshot-Platzhalter · assets/tab-content.png ablegen",
 
       feat4_h3: "Erfasse jeden Link auf der Seite",
-      feat4_p: "Intern vs. extern, generischer Ankertext, crawlbare Links und eine Live-Prüfung defekter Links.",
+      feat4_p: "Intern vs. extern, generischer Ankertext, crawlbare Links und ein Live-Checker für defekte Links — damit nichts unbemerkt Autorität verliert oder 404 wird.",
       feat4_l1: "Aufteilung intern vs. extern",
       feat4_l2: "Ankertext & crawlbare Links",
       feat4_l3: "Erkennung defekter Links",
@@ -305,8 +309,8 @@
 
       cv_e_h: "Ranke bei Google. Werde von der KI zitiert.",
       cv_e_sub: "SEOryon macht das SEO und schreibt die Inhalte — die Kontrolle über deine Website behältst du.",
-      cv_e_cta: "30 Tage kostenlos testen →",
-      cv_e_fine: "Artikel für dich geschrieben · Live-LLM-Zitations-Audit · Neueste Modelle · In zwei Klicks kündbar.",
+      cv_e_cta: "3 Tage kostenlos testen →",
+      cv_e_fine: "3-tägige Testphase · 3 veröffentlichte Artikel · 1 ausführliches LLM/GEO-Audit · In zwei Klicks kündbar.",
       cv_e_secondary: "Oder nutze Inspect weiter kostenlos — für immer deins.",
 
       faq_h2: "Fragen, beantwortet",
@@ -326,16 +330,16 @@
       faq4_a: "Inspect auditiert eine Seite, auf Abruf, kostenlos. SEOryon arbeitet laufend für deine ganze Website, verfolgt, wo du in der KI-Suche zitiert wirst, und schreibt die Inhalte, die dich auffindbar machen.",
 
       faq5_q: "Wie unterscheidet sich SEOryon von einem Keyword-Tool oder einem KI-Schreiber?",
-      faq5_a: "Keyword-Tools geben dir eine Liste und hören auf; KI-Schreiber liefern generischen Text. SEOryon liest Live-Suchdaten, entscheidet, was sich zu schreiben lohnt und warum, und schreibt dann Inhalte fürs Ranking — Recherche und Schreiben in einem Loop.",
+      faq5_a: "Keyword-Tools hören bei einer Liste auf — sie sagen dir, wonach Menschen suchen, und überlassen dir den schweren Teil (zu entscheiden, was sich wirklich zu schreiben lohnt, und es zu schreiben). KI-Schreiber machen das Gegenteil: Sie erzeugen schnell Text, aber ohne Verankerung in Live-Suchdaten — also generische Artikel, die nicht ranken. SEOryon schließt den Kreis. Ein einzelner Agent liest echte Suchsignale — Live-SERPs, „Ähnliche Fragen“, Keyword-Schwierigkeit, Wettbewerber-Lücken, Trends —, entscheidet, welche Themen deinen Traffic wirklich bewegen und warum, und schreibt dann jeden Artikel auf Basis dieser Daten und prüft die Fakten. Du bekommst die Recherche eines Keyword-Tools und die Ausgabe eines Schreibers, verbunden, statt für beides zu zahlen und es selbst zusammenzustückeln.",
       faq6_q: "Brauche ich noch Ahrefs oder Semrush?",
-      faq6_a: "Die meisten Teams nicht. SEOryon verfolgt Rankings, Wettbewerber, Backlinks und Site-Vitalwerte, die diese Tools zeigen — und handelt danach, indem es Inhalte veröffentlicht. Behalte sie, wenn du willst; SEOryon ersetzt die Fleißarbeit.",
+      faq6_a: "Für die meisten Teams: nein. SEOryon verfolgt bereits, was diese Tools zeigen — deine Rankings, deine Wettbewerber, deine Backlinks und die technische Gesundheit deiner Website —, aber statt bei einem Dashboard aufzuhören, auf das du reagieren musst, handelt es: Es verwandelt diese Signale in veröffentlichte Inhalte, die ranken. Ahrefs und Semrush sind Nachschlagewerke; SEOryon ist das Team, das das Nachschlagewerk liest und die Arbeit macht. Behalte sie, wenn du die Daten liebst, aber zum Wachsen brauchst du sie nicht.",
       faq7_q: "Warum SEOryon statt einer Agentur oder manueller Arbeit?",
-      faq7_a: "Eine Agentur ist langsam und teuer; manuelles SEO frisst deine Woche. SEOryon betreibt den Recherche-bis-Veröffentlichungs-Loop laufend zu einem Bruchteil der Kosten — und du gibst alles frei.",
+      faq7_a: "Eine Agentur ist teuer, langsam, und du weißt nie ganz, wofür du zahlst; SEO selbst zu machen frisst jede Woche Stunden für Recherche, Schreiben und Tracking. SEOryon betreibt diesen gesamten Recherche-bis-Veröffentlichungs-Loop laufend, zu einem Bruchteil eines Agentur-Honorars — und anders als bei einer Agentur ist nichts eine Blackbox: Du siehst jede Empfehlung und gibst jeden Artikel frei. Du bekommst Output im Agentur-Maßstab mit voller Kontrolle und ohne die Fleißarbeit.",
 
       faq8_q: "Was ist GEO (Generative Engine Optimization)?",
-      faq8_a: "GEO bedeutet, dafür zu optimieren, in KI-Antworten zitiert zu werden — ChatGPT, Perplexity, Gemini, Google AI — nicht nur in den zehn blauen Links. Da Menschen die KI fragen statt zu suchen, ist die zitierte Quelle die neue Titelseite.",
+      faq8_a: "GEO bedeutet, dafür zu optimieren, die Quelle zu sein, die KI-Antworten zitieren — in ChatGPT, Perplexity, Gemini und Googles KI-Übersichten — statt nur in den zehn blauen Links zu ranken. Immer mehr Menschen fragen einen KI-Assistenten, statt eine Ergebnisseite zu durchscrollen, und der Assistent zitiert eine Handvoll Quellen. Bei GEO geht es darum, eine dieser Quellen zu sein: klare Struktur, wirklich nützliche Antworten, das richtige Markup und Crawler-Zugang für KI-Bots. SEOryon schreibt dafür und verfolgt, wo du bereits zitiert wirst.",
       faq9_q: "Wie werde ich in ChatGPT, Perplexity und Google AI zitiert?",
-      faq9_a: "Veröffentliche klare, gut strukturierte, wirklich nützliche Inhalte, die echte Fragen beantworten — genau das, was LLMs zitieren. SEOryon schreibt dafür und verfolgt, wo du bereits zitiert wirst.",
+      faq9_a: "Du verdienst Zitate so, wie du Rankings verdienst — indem du die klarste, nützlichste Antwort auf eine echte Frage bist —, aber KI belohnt ein paar zusätzliche Dinge: gut strukturierte Inhalte, die sie extrahieren kann (Überschriften, prägnante Antworten, Listen, FAQ-Markup), nachgewiesene Expertise und Vertrauenssignale sowie eine Website, die KI-Crawler hereinlässt. SEOryons kostenloses Inspect-Tool zeigt, ob eine Seite strukturell bereit ist, und die SEOryon-Plattform schreibt Inhalte, die zitiert werden sollen, und verfolgt, wo du tatsächlich auftauchst.",
       faq10_q: "Wie unterscheidet sich das Ranking in KI-Antworten vom Google-Ranking?",
       faq10_a: "Google rankt Seiten; KI-Antworten zitieren Quellen innerhalb einer generierten Antwort. Die Grundlagen überschneiden sich — Qualität, Struktur, Autorität —, aber KI belohnt Inhalte, die die Frage direkt beantworten. SEOryon optimiert für beides.",
 
@@ -348,8 +352,8 @@
       faq14_q: "Wer entscheidet, was veröffentlicht wird?",
       faq14_a: "Du. Im Semi-Autopilot gibst du jedes Stück per Klick frei; im Voll-Autopilot veröffentlicht SEOryon nach deinen Regeln. So oder so geht nichts ohne deine Zustimmung live.",
 
-      faq15_q: "Was ist in der 30-tägigen kostenlosen Testphase enthalten?",
-      faq15_a: "Für dich geschriebene, veröffentlichte Artikel, ein ausführliches LLM-Zitations-Audit, die neuesten Modelle und voller Zugriff — in zwei Klicks kündbar.",
+      faq15_q: "Was ist in der kostenlosen Testphase enthalten?",
+      faq15_a: "Eine 3-tägige kostenlose Testphase: 3 für dich geschriebene, veröffentlichte Artikel und 1 ausführliches LLM/GEO-Audit, mit vollem Zugriff. In zwei Klicks kündbar — keine Kreditkarten-Spielchen.",
       faq16_q: "Semi-Autopilot vs. Voll-Autopilot — was ist der Unterschied?",
       faq16_a: "Semi schlägt fertige Empfehlungen vor, die du per Klick annimmst oder überspringst, und lernt mit der Zeit deinen Geschmack. Voll-Autopilot erledigt den ganzen Loop. Starte mit Semi und übergib so viel du willst.",
       faq17_q: "Welche Plattformen und Sprachen werden unterstützt?",
@@ -360,8 +364,8 @@
 
     /* ---- FR · AI-translated, PENDING NATIVE REVIEW ---- */
     fr: {
-      meta_title: "Inspect — Inspecteur SEO gratuit pour Chrome · SEOryon",
-      meta_desc: "Analysez le SEO de n’importe quelle page en un clic. Une extension Chrome gratuite qui audite les signaux techniques, meta, contenu et liens — en local, sans inscription. Par SEOryon.",
+      meta_title: "Inspect — Extension d’inspection SEO gratuite pour Chrome · SEOryon",
+      meta_desc: "Auditez le SEO on-page de n’importe quelle page en un clic — une extension Chrome gratuite vérifiant les signaux techniques, meta, contenu et liens, plus la préparation GEO (recherche IA). Vérificateur de meta tags & de liens cassés, en local, sans inscription. Par SEOryon.",
 
       nav_how: "Comment ça marche",
       nav_faq: "FAQ",
@@ -369,7 +373,8 @@
 
       hero_pill: "Gratuit pour toujours · Tourne en local · Sans inscription",
       hero_h1: 'Analysez le SEO de n’importe quelle page <span class="brand-text">en un clic</span>.',
-      hero_sub: "Une extension Chrome gratuite qui audite 12 signaux SEO sur n’importe quelle page — technique, meta, contenu et liens — directement dans votre navigateur. Sans inscription, rien ne quitte votre onglet.",
+      hero_sub: "Une extension Chrome gratuite pour les audits SEO on-page — vérifiez les signaux techniques, meta, contenu et liens sur n’importe quelle page, plus un score GEO (préparation à la recherche IA). Tourne en local, sans inscription, rien ne quitte votre onglet.",
+      browsers_label: "Fonctionne sur",
       cta_how: "Voir comment ça marche →",
       hero_micro: "Fonctionne sur toute page ouverte · Chrome & Edge · Gratuit pour toujours — l’installation est tout le produit.",
 
@@ -380,6 +385,7 @@
       tab2_name: "Meta", tab2_a1: "Balise title", tab2_a2: "Méta-description", tab2_a3: "Canonique",
       tab3_name: "Contenu", tab3_a1: "Texte alt", tab3_a2: "Titres", tab3_a3: "Lisibilité",
       tab4_name: "Liens", tab4_a1: "Texte des liens", tab4_a2: "Liens explorables", tab4_a3: "Liens cassés",
+      tab5_name: "GEO", tab5_a1: "llms.txt", tab5_a2: "Robots IA", tab5_a3: "Contenu citable",
 
       chip1_title: "Aucune inscription",
       chip1_sub: "Installez et commencez à analyser en un clic",
@@ -387,7 +393,7 @@
       chip2_sub: "Les audits tournent dans votre navigateur — rien n’est envoyé à un serveur",
 
       feat_h2: "Tout pour inspecter, dans un seul panneau",
-      feat_sub: "Quatre onglets. Douze vérifications. Chacune codée par couleur — réussie, avertissement ou échec — avec la correction détaillée.",
+      feat_sub: "Un audit SEO on-page sur cinq onglets — technique, meta, contenu, liens et un score GEO (préparation à la recherche IA). Chaque vérification codée par couleur — réussie, avertissement ou échec — avec la correction détaillée.",
 
       feat1_h3: "Repérez ce qui bloque l’indexation",
       feat1_p: "Explorabilité, canoniques, hreflang et viewport d’un coup d’œil — les signaux qui décident si une page peut se classer.",
@@ -398,7 +404,7 @@
       feat1_ph: "Espace réservé · déposer assets/tab-technical.png",
 
       feat2_h3: "Voyez ce que voient Google et les réseaux",
-      feat2_p: "Title, description et cartes Open Graph / Twitter — avec comptage de caractères en direct et alertes dès que quelque chose cloche.",
+      feat2_p: "Title, description et cartes Open Graph / Twitter — un vérificateur de meta tags intégré avec comptage de caractères en direct et alertes dès que quelque chose cloche.",
       feat2_l1: "Contrôle de longueur du title & de la description",
       feat2_l2: "Aperçu des cartes Open Graph & Twitter",
       feat2_l3: "Signalement des balises en double & manquantes",
@@ -414,7 +420,7 @@
       feat3_ph: "Espace réservé · déposer assets/tab-content.png",
 
       feat4_h3: "Cartographiez chaque lien de la page",
-      feat4_p: "Interne vs externe, texte d’ancre générique, liens explorables et une vérification en direct des liens cassés.",
+      feat4_p: "Interne vs externe, texte d’ancre générique, liens explorables et un vérificateur de liens cassés en direct — pour que rien ne fuie d’autorité ni ne tombe en 404 en silence.",
       feat4_l1: "Répartition interne vs externe",
       feat4_l2: "Texte d’ancre & liens explorables",
       feat4_l3: "Détection des liens cassés",
@@ -478,8 +484,8 @@
 
       cv_e_h: "Classez-vous sur Google. Soyez cité par l’IA.",
       cv_e_sub: "SEOryon fait le SEO et rédige le contenu — vous gardez le contrôle de votre site.",
-      cv_e_cta: "Démarrer l’essai gratuit de 30 jours →",
-      cv_e_fine: "Articles rédigés pour vous · Audit de citations LLM en direct · Derniers modèles · Annulation en deux clics.",
+      cv_e_cta: "Démarrer l’essai gratuit de 3 jours →",
+      cv_e_fine: "Essai gratuit de 3 jours · 3 articles publiés · 1 audit LLM/GEO approfondi · Annulation en deux clics.",
       cv_e_secondary: "Ou continuez à utiliser Inspect gratuitement — il est à vous pour toujours.",
 
       faq_h2: "Vos questions, nos réponses",
@@ -499,16 +505,16 @@
       faq4_a: "Inspect audite une page, à la demande, gratuitement. SEOryon travaille en continu sur tout votre site, suit où vous êtes cité dans la recherche IA, et écrit le contenu qui vous rend trouvable.",
 
       faq5_q: "En quoi SEOryon diffère-t-il d’un outil de mots-clés ou d’un rédacteur IA ?",
-      faq5_a: "Les outils de mots-clés vous donnent une liste et s’arrêtent ; les rédacteurs IA produisent du texte générique. SEOryon lit des données de recherche en direct, décide ce qui vaut la peine d’être écrit et pourquoi, puis rédige du contenu fait pour se classer — recherche et rédaction dans une seule boucle.",
+      faq5_a: "Les outils de mots-clés s’arrêtent à une liste — ils vous disent ce que les gens recherchent, puis vous laissent le plus dur (décider de ce qui vaut vraiment la peine d’être écrit, et l’écrire). Les rédacteurs IA font l’inverse : ils génèrent du texte vite, mais sans ancrage dans des données de recherche en direct, donc vous obtenez des articles génériques qui ne se classent pas. SEOryon boucle la boucle. Un seul agent lit de vrais signaux de recherche — SERP en direct, « Autres questions posées », difficulté des mots-clés, écarts concurrents, tendances —, décide quels sujets feront vraiment bouger votre trafic et pourquoi, puis rédige chaque article sur ces données et en vérifie les faits. Vous obtenez la recherche d’un outil de mots-clés et la production d’un rédacteur, connectées, au lieu de payer les deux et de les assembler vous-même.",
       faq6_q: "Ai-je encore besoin d’Ahrefs ou de Semrush ?",
-      faq6_a: "La plupart des équipes, non. SEOryon suit les classements, les concurrents, les backlinks et les indicateurs de site que ces outils affichent — puis agit en publiant du contenu. Gardez-les si vous le souhaitez ; SEOryon remplace le travail fastidieux.",
+      faq6_a: "Pour la plupart des équipes, non. SEOryon suit déjà ce que ces outils font remonter — vos classements, vos concurrents, vos backlinks et la santé technique de votre site — mais au lieu de s’arrêter à un tableau de bord sur lequel vous devez agir, il agit : il transforme ces signaux en contenu publié qui se classe. Ahrefs et Semrush sont des bibliothèques de référence ; SEOryon est l’équipe qui lit la bibliothèque et fait le travail. Gardez-les si vous aimez les données, mais vous n’en aurez pas besoin pour grandir.",
       faq7_q: "Pourquoi SEOryon plutôt qu’une agence ou du manuel ?",
-      faq7_a: "Une agence est lente et coûteuse ; le SEO manuel mange votre semaine. SEOryon fait tourner la boucle recherche-à-publication en continu pour une fraction du coût — et vous validez tout.",
+      faq7_a: "Une agence est coûteuse, lente, et vous ne savez jamais vraiment ce que vous payez ; faire le SEO soi-même dévore des heures chaque semaine en recherche, rédaction et suivi. SEOryon fait tourner toute cette boucle recherche-à-publication en continu, pour une fraction d’un forfait d’agence — et contrairement à une agence, rien n’est une boîte noire : vous voyez chaque recommandation et validez chaque article. Vous obtenez une production à l’échelle d’une agence, avec un contrôle total et sans le travail fastidieux.",
 
       faq8_q: "Qu’est-ce que le GEO (generative engine optimization) ?",
-      faq8_a: "Le GEO consiste à optimiser pour être cité dans les réponses IA — ChatGPT, Perplexity, Gemini, Google AI — et pas seulement dans les dix liens bleus. Comme les gens demandent à l’IA au lieu de chercher, être la source qu’elle cite est la nouvelle première page.",
+      faq8_a: "Le GEO consiste à optimiser pour être la source que citent les réponses IA — dans ChatGPT, Perplexity, Gemini et les aperçus IA de Google — au lieu de seulement se classer dans les dix liens bleus. De plus en plus de gens interrogent un assistant IA au lieu de parcourir une page de résultats, et l’assistant cite une poignée de sources. Le GEO, c’est être l’une de ces sources : structure claire, réponses vraiment utiles, le bon balisage et un accès aux robots IA. SEOryon écrit pour cela et suit où vous êtes déjà cité.",
       faq9_q: "Comment être cité dans ChatGPT, Perplexity et Google AI ?",
-      faq9_a: "Publiez un contenu clair, bien structuré et vraiment utile qui répond à de vraies questions — exactement ce que les LLM citent. SEOryon écrit pour cela et suit où vous êtes déjà cité.",
+      faq9_a: "Vous gagnez des citations comme vous gagnez des classements — en étant la réponse la plus claire et la plus utile à une vraie question —, mais l’IA récompense quelques éléments en plus : un contenu bien structuré qu’elle peut extraire (titres, réponses concises, listes, balisage FAQ), une expertise et des signaux de confiance démontrés, et un site qui laisse entrer les robots IA. L’outil gratuit Inspect de SEOryon montre si une page est structurellement prête, et la plateforme SEOryon rédige du contenu fait pour être cité et suit où vous apparaissez réellement.",
       faq10_q: "En quoi se classer dans les réponses IA diffère-t-il de Google ?",
       faq10_a: "Google classe des pages ; les réponses IA citent des sources au sein d’une réponse générée. Les fondamentaux se recoupent — qualité, structure, autorité — mais l’IA récompense le contenu qui répond directement à la question. SEOryon optimise pour les deux.",
 
@@ -521,8 +527,8 @@
       faq14_q: "Qui décide de ce qui est publié ?",
       faq14_a: "Vous. En semi-pilote, vous validez chaque contenu en un clic ; en pilote complet, SEOryon publie selon vos règles. Dans tous les cas, rien ne part en ligne sans votre accord.",
 
-      faq15_q: "Qu’est-ce qui est inclus dans l’essai gratuit de 30 jours ?",
-      faq15_a: "Des articles publiés rédigés pour vous, un audit approfondi des citations LLM, les derniers modèles et un accès complet — annulable en deux clics.",
+      faq15_q: "Qu’est-ce qui est inclus dans l’essai gratuit ?",
+      faq15_a: "Un essai gratuit de 3 jours : 3 articles publiés rédigés pour vous et 1 audit LLM/GEO approfondi, avec un accès complet. Annulable en deux clics — sans gymnastique de carte bancaire.",
       faq16_q: "Semi-pilote vs pilote complet — quelle différence ?",
       faq16_a: "Le semi propose des recommandations finalisées que vous validez ou ignorez en un clic, et apprend vos préférences au fil du temps. Le pilote complet exécute toute la boucle. Commencez en semi, déléguez autant que vous voulez.",
       faq17_q: "Quelles plateformes et langues prenez-vous en charge ?",

@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Set .js synchronously so scroll-reveal elements aren't hidden without JS (no flash). -->
   <script>document.documentElement.className += " js";</script>
-  <title>Inspect — Free SEO inspector for Chrome · SEOryon</title>
-  <meta name="description" content="Inspect any page's SEO in one click. A free Chrome extension that audits technical, meta, content, and link signals — locally, no signup. Built by SEOryon." />
-  <meta property="og:title" content="Inspect — Free SEO inspector for Chrome" />
-  <meta property="og:description" content="Audit any page's SEO in one click. Free Chrome extension. Runs locally, no signup. Built by SEOryon." />
+  <title>Inspect — Free SEO inspector extension for Chrome · SEOryon</title>
+  <meta name="description" content="Audit any page's on-page SEO in one click — a free Chrome extension checking technical, meta, content &amp; link signals plus GEO (AI-search) readiness. Meta-tag checker, broken-link checker, runs locally, no signup. By SEOryon." />
+  <meta property="og:title" content="Inspect — Free SEO &amp; GEO inspector for Chrome" />
+  <meta property="og:description" content="On-page SEO audit in one click — free Chrome extension. Technical, meta, content &amp; link checks plus GEO / AI-search readiness. Runs locally, no signup." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://inspect.seoryon.com" />
   <meta property="og:image" content="https://inspect.seoryon.com/logo.png" />
@@ -34,9 +34,9 @@
       "@type": "SoftwareApplication",
       "name": "Inspect by SEOryon",
       "applicationCategory": "BrowserApplication",
-      "operatingSystem": "Chrome, Edge, Brave, Arc",
+      "operatingSystem": "Chrome, Edge, Brave, Arc, Opera",
       "url": "https://inspect.seoryon.com",
-      "description": "Free Chrome extension that audits any page's SEO — technical, meta, content, and link signals — locally in your browser, with no signup.",
+      "description": "Free Chrome extension for on-page SEO audits — checks technical, meta, content and link signals plus GEO (AI-search) readiness, locally in your browser, with no signup.",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
       "creator": { "@type": "Organization", "name": "SEOryon", "url": "https://seoryon.com" }
     }
@@ -69,7 +69,7 @@
       </div>
 
       <h1 data-i18n-html="hero_h1">Inspect any page's SEO <span class="brand-text">in one click</span>.</h1>
-      <p class="sub" data-i18n="hero_sub">A free Chrome extension that audits 12 SEO signals on any page — technical, meta, content, and links — right in your browser. No signup, nothing leaves your tab.</p>
+      <p class="sub" data-i18n="hero_sub">A free Chrome extension for on-page SEO audits — check technical, meta, content, and link signals on any page, plus a GEO (AI-search readiness) score. Runs locally, no signup, nothing leaves your tab.</p>
 
       <div class="hero-actions">
         <!-- TODO: Chrome Web Store URL — gradient hero CTA, same slot the "Score it →" button held on score.seoryon.com. -->
@@ -78,16 +78,18 @@
       </div>
       <p class="microcopy" data-i18n="hero_micro">Works on any page you're viewing · Chrome &amp; Edge · Free forever — the install is the whole product.</p>
 
-      <!-- Product shot: the real Inspect side panel (web/assets/panel-hero.png). -->
+      <!-- Product shot: the Inspect side panel. TODO: drop the NEW panel-hero.png
+           (showing the GEO tab + Page-Score & GEO paired dashboard) into web/assets/.
+           Until then the labeled placeholder below shows. -->
       <figure class="hero-shot">
-        <img class="shot" src="/assets/panel-hero.png" alt="Inspect Chrome extension side panel showing a page's SEO score and audits" data-i18n-alt="shot_hero_alt" />
+        <img class="shot" src="/assets/panel-hero.png" alt="Inspect Chrome extension side panel showing a page's SEO score, GEO score, and audits" data-i18n-alt="shot_hero_alt" />
         <div class="shot-ph" hidden>
           <span class="shot-ph-tag">PNG</span>
           <span class="shot-ph-label" data-i18n="shot_hero_ph">Screenshot placeholder — Inspect side panel · drop assets/panel-hero.png</span>
         </div>
       </figure>
 
-      <!-- "What gets checked" — Inspect's four tabs + its real audits, dashboard-card style -->
+      <!-- "What gets checked" — Inspect's five tabs + its real audits, dashboard-card style -->
       <div class="signals-row tabs-row" aria-label="What Inspect checks">
         <div class="signal-card">
           <div class="signal-name" data-i18n="tab1_name">Technical</div>
@@ -121,6 +123,14 @@
             <li data-i18n="tab4_a3">Broken links</li>
           </ul>
         </div>
+        <div class="signal-card">
+          <div class="signal-name" data-i18n="tab5_name">GEO</div>
+          <ul class="audit-list">
+            <li data-i18n="tab5_a1">llms.txt</li>
+            <li data-i18n="tab5_a2">AI crawlers</li>
+            <li data-i18n="tab5_a3">Citable content</li>
+          </ul>
+        </div>
       </div>
 
       <div class="download-row">
@@ -139,12 +149,22 @@
           </span>
         </div>
       </div>
+
+      <!-- Browser compatibility — Chrome + Chromium family (text badges, no logos) -->
+      <p class="browser-row">
+        <span class="browser-label" data-i18n="browsers_label">Works on</span>
+        <span class="browser-badge">Chrome</span>
+        <span class="browser-badge">Edge</span>
+        <span class="browser-badge">Brave</span>
+        <span class="browser-badge">Arc</span>
+        <span class="browser-badge">Opera</span>
+      </p>
     </section>
 
     <!-- Feature rows: each tab with a screenshot slot -->
     <section class="features" id="features">
       <h2 class="reveal" data-i18n="feat_h2">Everything you need to inspect, in one panel</h2>
-      <p class="features-sub reveal" data-i18n="feat_sub">Four tabs. Twelve checks. Each one color-coded pass, warn, or fail — with the fix spelled out.</p>
+      <p class="features-sub reveal" data-i18n="feat_sub">One on-page SEO audit across five tabs — technical, meta, content, links, and a GEO (AI-search readiness) score. Each check is color-coded pass, warn, or fail, with the fix spelled out.</p>
 
       <div class="feature-row reveal">
         <div class="feature-text">
@@ -172,7 +192,7 @@
         <div class="feature-text">
           <span class="feature-kicker">Meta</span>
           <h3 data-i18n="feat2_h3">See what Google and social see</h3>
-          <p data-i18n="feat2_p">Title, description, and Open Graph / Twitter cards — with live character counts and warnings the moment they're off.</p>
+          <p data-i18n="feat2_p">Title, description, and Open Graph / Twitter cards — a built-in meta-tag checker with live character counts and warnings the moment they're off.</p>
           <ul class="feature-list">
             <li data-i18n="feat2_l1">Title &amp; description length checks</li>
             <li data-i18n="feat2_l2">Open Graph &amp; Twitter card preview</li>
@@ -216,7 +236,7 @@
         <div class="feature-text">
           <span class="feature-kicker">Links</span>
           <h3 data-i18n="feat4_h3">Map every link on the page</h3>
-          <p data-i18n="feat4_p">Internal vs external, generic anchor text, crawlable links, and a live broken-link check.</p>
+          <p data-i18n="feat4_p">Internal vs external, generic anchor text, crawlable links, and a live broken-link checker — so nothing leaks authority or 404s in silence.</p>
           <ul class="feature-list">
             <li data-i18n="feat4_l1">Internal vs external split</li>
             <li data-i18n="feat4_l2">Anchor text &amp; crawlable links</li>
@@ -434,8 +454,8 @@
         <span class="cta-accent" aria-hidden="true"></span>
         <h2 data-i18n="cv_e_h">Rank in Google. Get cited by AI.</h2>
         <p data-i18n="cv_e_sub">SEOryon does the SEO and writes the content — you keep control of your site.</p>
-        <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=convert&utm_campaign=trial" class="btn-gradient btn-gradient-lg" data-i18n="cv_e_cta">Start your 30-day free trial →</a>
-        <p class="microcopy" data-i18n="cv_e_fine">Articles written for you · Live LLM citation audit · Latest models · Cancel in two clicks.</p>
+        <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=convert&utm_campaign=trial" class="btn-gradient btn-gradient-lg" data-i18n="cv_e_cta">Start your 3-day free trial →</a>
+        <p class="microcopy" data-i18n="cv_e_fine">3-day free trial · 3 published articles · 1 in-depth LLM/GEO audit · Cancel in two clicks.</p>
         <a href="#install" class="convert-secondary" data-i18n="cv_e_secondary">Or keep using Inspect free — it's yours forever.</a>
       </div>
     </section>
@@ -471,15 +491,15 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary data-i18n="faq5_q">How is SEOryon different from a keyword tool or an AI writer?</summary>
-            <p data-i18n="faq5_a">Keyword tools hand you a list and stop; AI writers spit out generic text. SEOryon reads live search data, decides what's worth writing and why, then writes content built to rank — research and writing in one loop.</p>
+            <p data-i18n="faq5_a">Keyword tools stop at a list — they tell you what people search, then leave the hard part (deciding what's actually worth writing, and writing it) to you. AI writers do the opposite: they generate text fast, but with no grounding in live search data, so you get generic articles that don't rank. SEOryon closes the loop. A single agent reads real search signals — live SERPs, People Also Ask, keyword difficulty, competitor gaps, trends — decides which topics will actually move your traffic and why, then writes each article on that data and checks the facts. You get the research of a keyword tool and the output of a writer, connected, instead of paying for both and stitching them together yourself.</p>
           </details>
           <details class="faq-item">
             <summary data-i18n="faq6_q">Do I still need Ahrefs or Semrush?</summary>
-            <p data-i18n="faq6_a">Most teams don't. SEOryon tracks the rankings, competitors, backlinks, and site vitals those tools show — then acts on them by publishing content. Keep them if you like; SEOryon is built to replace the busywork.</p>
+            <p data-i18n="faq6_a">For most teams, no. SEOryon already tracks the things those tools surface — your rankings, your competitors, your backlinks, and your site's technical health — but instead of stopping at a dashboard you have to act on, it acts: it turns those signals into published content that ranks. Ahrefs and Semrush are reference libraries; SEOryon is the team that reads the library and does the work. Keep them if you love the data, but you won't need them to grow.</p>
           </details>
           <details class="faq-item">
             <summary data-i18n="faq7_q">Why SEOryon instead of an agency or doing it manually?</summary>
-            <p data-i18n="faq7_a">An agency is slow and expensive; manual SEO eats your week. SEOryon runs the research-to-publish loop continuously at a fraction of the cost — and you approve everything.</p>
+            <p data-i18n="faq7_a">An agency is expensive, slow, and you're never quite sure what you're paying for; doing SEO yourself eats hours every week on research, writing, and tracking. SEOryon runs that entire research-to-publish loop continuously, for a fraction of an agency retainer — and unlike an agency, nothing is a black box: you see every recommendation and approve every article. You get agency-scale output with full control and none of the busywork.</p>
           </details>
         </div>
       </div>
@@ -489,11 +509,11 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary data-i18n="faq8_q">What is GEO (generative engine optimization)?</summary>
-            <p data-i18n="faq8_a">GEO is optimizing to be cited in AI answers — ChatGPT, Perplexity, Gemini, Google AI — not just the ten blue links. As people ask AI instead of searching, being the source it quotes is the new front page.</p>
+            <p data-i18n="faq8_a">GEO is optimizing to be the source AI answers cite — in ChatGPT, Perplexity, Gemini, and Google's AI overviews — instead of just ranking in the ten blue links. More and more people ask an AI assistant instead of scrolling a results page, and the assistant quotes a handful of sources. GEO is about being one of those sources: clear structure, genuinely useful answers, the right markup, and crawler access for AI bots. SEOryon writes for it and tracks where you're already being cited.</p>
           </details>
           <details class="faq-item">
             <summary data-i18n="faq9_q">How do I get cited in ChatGPT, Perplexity, and Google AI?</summary>
-            <p data-i18n="faq9_a">Publish clear, well-structured, genuinely useful content that answers real questions — exactly what LLMs quote. SEOryon writes for that, and tracks where you're already being cited.</p>
+            <p data-i18n="faq9_a">You earn citations the way you earn rankings — by being the clearest, most useful answer to a real question — but AI rewards a few extra things: well-structured content it can extract (headings, concise answers, lists, FAQ markup), demonstrated expertise and trust signals, and a site that lets AI crawlers in. SEOryon's free Inspect tool shows whether a page is structurally ready, and the SEOryon platform writes content built to be cited and tracks where you actually appear.</p>
           </details>
           <details class="faq-item">
             <summary data-i18n="faq10_q">How is ranking in AI answers different from ranking in Google?</summary>
@@ -528,8 +548,8 @@
         <h3 class="faq-group-title" data-i18n="faq_gE">Plans &amp; practical</h3>
         <div class="faq-list">
           <details class="faq-item">
-            <summary data-i18n="faq15_q">What's included in the 30-day free trial?</summary>
-            <p data-i18n="faq15_a">Published articles written for you, an in-depth LLM citation audit, the latest models, and full access — cancel in two clicks.</p>
+            <summary data-i18n="faq15_q">What's included in the free trial?</summary>
+            <p data-i18n="faq15_a">A 3-day free trial: 3 published articles written for you and 1 in-depth LLM/GEO audit, with full access. Cancel in two clicks — no card gymnastics.</p>
           </details>
           <details class="faq-item">
             <summary data-i18n="faq16_q">Semi-autopilot vs. full autopilot — what's the difference?</summary>
@@ -542,6 +562,26 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================================================
+         TESTIMONIALS — structure BUILT, kept commented out until we
+         have REAL Chrome Web Store reviews. To ship: paste real review
+         cards below and uncomment the <section>. The .testimonials /
+         .testimonial-card / .stars styles already exist in inspect.css.
+         ★ Never add fake testimonials, names, ratings, or user counts.
+
+         <section class="testimonials" id="testimonials">
+           <h2 class="reveal">What people are saying</h2>
+           <div class="testimonial-grid">
+             <figure class="testimonial-card reveal">
+               <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+               <blockquote>Real review quote goes here.</blockquote>
+               <figcaption>— Reviewer name · Chrome Web Store</figcaption>
+             </figure>
+             (repeat one .testimonial-card per real review)
+           </div>
+         </section>
+         ============================================================ -->
 
     <footer>
       <div>
