@@ -206,21 +206,39 @@
 .how .card p { font-size: 14px; color: var(--ink-secondary); line-height: 1.55; }
 
 /* ============================================================
-   Use cases
+   Use cases — persona list (deliberately distinct from the
+   How-it-works numbered cards: full-width icon-led rows)
    ============================================================ */
 .usecases { margin-top: 88px; }
 .usecases h2 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: -0.03em; color: var(--ink-primary); margin-bottom: 24px; }
-.uc-tag { display: inline-block; font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; color: var(--brand-primary); margin-bottom: 12px; }
-.usecases .card h3 { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--ink-primary); margin-bottom: 8px; }
-.usecases .card p { font-size: 14px; color: var(--ink-secondary); line-height: 1.55; }
+.persona-list { display: grid; gap: 14px; max-width: 880px; }
+.persona {
+  display: flex; align-items: flex-start; gap: 20px;
+  background: var(--surface-card); border: 1px solid var(--surface-border);
+  border-radius: 16px; padding: 22px 24px;
+}
+.persona-icon {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--brand-tint); color: var(--brand-primary);
+}
+.persona-icon svg { width: 26px; height: 26px; }
+.persona-body { display: flex; flex-direction: column; }
+.persona-name {
+  font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-primary); margin-bottom: 6px;
+}
+.persona-body h3 { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: var(--ink-primary); margin-bottom: 5px; }
+.persona-body p { font-size: 14.5px; color: var(--ink-secondary); line-height: 1.55; max-width: 62ch; }
 
-/* Shared hover life for content cards */
-.how .grid3 .card, .usecases .card, .convert-pillars .card {
+/* Shared hover life for content cards / persona rows */
+.how .grid3 .card, .persona, .convert-pillars .card {
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.how .grid3 .card:hover, .usecases .card:hover, .convert-pillars .card:hover {
+.how .grid3 .card:hover, .persona:hover, .convert-pillars .card:hover {
   transform: translateY(-3px); box-shadow: var(--shadow-card); border-color: var(--brand-light);
 }
+.persona:hover .persona-icon { background: var(--brand-primary); color: var(--ink-on-brand); transition: background-color .18s ease, color .18s ease; }
 
 /* ============================================================
    Conversion section (the Oryon / paid story)
@@ -267,12 +285,11 @@
   animation: oryonRipple 3.2s ease-out infinite;
 }
 .hub-ripple-2 { animation-delay: 1.6s; }
-.hub-core-disc {
+/* Center node = the real SEOryon mark (seoryon-mark.svg) */
+.hub-core-img {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-  width: 92px; height: 92px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--oryon-gradient); color: var(--ink-on-brand);
-  font-family: 'Geist', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -0.02em;
+  width: 88px; height: 88px; border-radius: 22px;
+  background: var(--surface-card);
   box-shadow: var(--shadow-brand);
 }
 /* faint breathing glow behind the disc */
@@ -387,7 +404,14 @@
    FAQ
    ============================================================ */
 .faq { margin-top: 96px; }
-.faq h2 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: -0.03em; color: var(--ink-primary); margin-bottom: 24px; }
+.faq h2 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: -0.03em; color: var(--ink-primary); margin-bottom: 28px; }
+.faq-group { max-width: 820px; }
+.faq-group + .faq-group { margin-top: 30px; }
+.faq-group-title {
+  font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 12px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-primary);
+  margin-bottom: 12px;
+}
 .faq-list { display: grid; gap: 10px; max-width: 820px; }
 .faq-item { background: var(--surface-card); border: 1px solid var(--surface-border); border-radius: 12px; padding: 4px 20px; }
 .faq-item summary {
@@ -446,5 +470,7 @@
   .how-nodes { grid-template-columns: repeat(3, 1fr); margin-bottom: 16px; }
   .signal-hub { max-width: 320px; }
   .hub-node { font-size: 9.5px; padding: 4px 8px; }
-  .hub-core-disc { width: 76px; height: 76px; font-size: 15px; }
+  .hub-core-img { width: 72px; height: 72px; border-radius: 18px; }
+  .persona { padding: 18px 18px; gap: 16px; }
+  .persona-icon { width: 46px; height: 46px; }
 }

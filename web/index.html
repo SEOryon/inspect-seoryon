@@ -14,12 +14,20 @@
   <meta property="og:image" content="https://inspect.seoryon.com/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://inspect.seoryon.com" />
-  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="alternate" hreflang="en" href="https://inspect.seoryon.com/" />
+  <link rel="alternate" hreflang="de" href="https://inspect.seoryon.com/?lang=de" />
+  <link rel="alternate" hreflang="fr" href="https://inspect.seoryon.com/?lang=fr" />
+  <link rel="alternate" hreflang="x-default" href="https://inspect.seoryon.com/" />
+  <!-- Favicon: the SEOryon "S" mark (generated from seoryon-mark.svg) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="/inspect.css" />
+  <!-- SoftwareApplication structured data (the FAQPage JSON-LD is injected by app.js from the FAQ copy). -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -70,24 +78,23 @@
       </div>
       <p class="microcopy" data-i18n="hero_micro">Works on any page you're viewing · Chrome &amp; Edge · Free forever — the install is the whole product.</p>
 
-      <!-- Product shot: framed Inspect side panel. Founder supplies the real PNG. -->
+      <!-- Product shot: the real Inspect side panel (web/assets/panel-hero.png). -->
       <figure class="hero-shot">
-        <!-- TODO: drop real screenshot → web/assets/panel-hero.png -->
-        <img class="shot" src="/assets/panel-hero.png" alt="Inspect side panel auditing a page" data-i18n-alt="shot_hero_alt" />
+        <img class="shot" src="/assets/panel-hero.png" alt="Inspect Chrome extension side panel showing a page's SEO score and audits" data-i18n-alt="shot_hero_alt" />
         <div class="shot-ph" hidden>
           <span class="shot-ph-tag">PNG</span>
           <span class="shot-ph-label" data-i18n="shot_hero_ph">Screenshot placeholder — Inspect side panel · drop assets/panel-hero.png</span>
         </div>
       </figure>
 
-      <!-- "What gets checked" — Inspect's four tabs + 12 audits, dashboard-card style -->
+      <!-- "What gets checked" — Inspect's four tabs + its real audits, dashboard-card style -->
       <div class="signals-row tabs-row" aria-label="What Inspect checks">
         <div class="signal-card">
           <div class="signal-name" data-i18n="tab1_name">Technical</div>
           <ul class="audit-list">
-            <li data-i18n="tab1_a1">HTTPS &amp; status code</li>
-            <li data-i18n="tab1_a2">Indexability &amp; robots</li>
-            <li data-i18n="tab1_a3">Canonical URL</li>
+            <li data-i18n="tab1_a1">Crawlability</li>
+            <li data-i18n="tab1_a2">Hreflang</li>
+            <li data-i18n="tab1_a3">Viewport</li>
           </ul>
         </div>
         <div class="signal-card">
@@ -95,22 +102,22 @@
           <ul class="audit-list">
             <li data-i18n="tab2_a1">Title tag</li>
             <li data-i18n="tab2_a2">Meta description</li>
-            <li data-i18n="tab2_a3">Open Graph &amp; social</li>
+            <li data-i18n="tab2_a3">Canonical</li>
           </ul>
         </div>
         <div class="signal-card">
           <div class="signal-name" data-i18n="tab3_name">Content</div>
           <ul class="audit-list">
-            <li data-i18n="tab3_a1">Heading outline</li>
-            <li data-i18n="tab3_a2">Image alt text</li>
-            <li data-i18n="tab3_a3">Word count</li>
+            <li data-i18n="tab3_a1">Alt text</li>
+            <li data-i18n="tab3_a2">Headings</li>
+            <li data-i18n="tab3_a3">Readability</li>
           </ul>
         </div>
         <div class="signal-card">
           <div class="signal-name" data-i18n="tab4_name">Links</div>
           <ul class="audit-list">
-            <li data-i18n="tab4_a1">Internal links</li>
-            <li data-i18n="tab4_a2">External &amp; nofollow</li>
+            <li data-i18n="tab4_a1">Link text</li>
+            <li data-i18n="tab4_a2">Crawlable links</li>
             <li data-i18n="tab4_a3">Broken links</li>
           </ul>
         </div>
@@ -143,17 +150,17 @@
         <div class="feature-text">
           <span class="feature-kicker">Technical</span>
           <h3 data-i18n="feat1_h3">Catch what blocks indexing</h3>
-          <p data-i18n="feat1_p">Status codes, redirects, HTTPS, canonicals, and meta-robots at a glance — the signals that decide whether a page can rank at all.</p>
+          <p data-i18n="feat1_p">Crawlability, canonicals, hreflang, and viewport at a glance — the signals that decide whether a page can rank at all.</p>
           <ul class="feature-list">
-            <li data-i18n="feat1_l1">HTTP status &amp; redirect chains</li>
-            <li data-i18n="feat1_l2">Canonical &amp; meta-robots / X-Robots-Tag</li>
-            <li data-i18n="feat1_l3">HTTPS, viewport &amp; charset</li>
+            <li data-i18n="feat1_l1">Crawlability &amp; robots directives</li>
+            <li data-i18n="feat1_l2">Canonical &amp; hreflang</li>
+            <li data-i18n="feat1_l3">Viewport &amp; mobile readiness</li>
           </ul>
         </div>
         <figure class="feature-shot">
           <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-technical.png -->
-          <img class="shot" src="/assets/tab-technical.png" alt="Inspect Technical tab" data-i18n-alt="feat1_alt" />
+          <img class="shot" src="/assets/tab-technical.png" alt="Inspect Technical tab — crawlability, hreflang, and viewport audits" data-i18n-alt="feat1_alt" />
           <div class="shot-ph" hidden>
             <span class="shot-ph-tag">PNG</span>
             <span class="shot-ph-label" data-i18n="feat1_ph">Screenshot placeholder · drop assets/tab-technical.png</span>
@@ -175,7 +182,7 @@
         <figure class="feature-shot">
           <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-meta.png -->
-          <img class="shot" src="/assets/tab-meta.png" alt="Inspect Meta tab" data-i18n-alt="feat2_alt" />
+          <img class="shot" src="/assets/tab-meta.png" alt="Inspect Meta tab — title, description, and social card audits" data-i18n-alt="feat2_alt" />
           <div class="shot-ph" hidden>
             <span class="shot-ph-tag">PNG</span>
             <span class="shot-ph-label" data-i18n="feat2_ph">Screenshot placeholder · drop assets/tab-meta.png</span>
@@ -187,17 +194,17 @@
         <div class="feature-text">
           <span class="feature-kicker">Content</span>
           <h3 data-i18n="feat3_h3">Read structure like a crawler</h3>
-          <p data-i18n="feat3_p">A full H1–H6 outline, alt-text coverage, and word count — so you catch thin content and broken hierarchy early.</p>
+          <p data-i18n="feat3_p">A full H1–H6 outline, alt-text coverage, and readability — so you catch thin content and broken hierarchy early.</p>
           <ul class="feature-list">
             <li data-i18n="feat3_l1">H1–H6 heading outline</li>
             <li data-i18n="feat3_l2">Image alt-text coverage</li>
-            <li data-i18n="feat3_l3">Word count &amp; thin-content flag</li>
+            <li data-i18n="feat3_l3">Readability &amp; thin-content flag</li>
           </ul>
         </div>
         <figure class="feature-shot">
           <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-content.png -->
-          <img class="shot" src="/assets/tab-content.png" alt="Inspect Content tab" data-i18n-alt="feat3_alt" />
+          <img class="shot" src="/assets/tab-content.png" alt="Inspect Content tab — headings, alt text, and readability audits" data-i18n-alt="feat3_alt" />
           <div class="shot-ph" hidden>
             <span class="shot-ph-tag">PNG</span>
             <span class="shot-ph-label" data-i18n="feat3_ph">Screenshot placeholder · drop assets/tab-content.png</span>
@@ -209,17 +216,17 @@
         <div class="feature-text">
           <span class="feature-kicker">Links</span>
           <h3 data-i18n="feat4_h3">Map every link on the page</h3>
-          <p data-i18n="feat4_p">Internal vs external, nofollow vs followed, and a live broken-link check with anchor text.</p>
+          <p data-i18n="feat4_p">Internal vs external, generic anchor text, crawlable links, and a live broken-link check.</p>
           <ul class="feature-list">
             <li data-i18n="feat4_l1">Internal vs external split</li>
-            <li data-i18n="feat4_l2">Nofollow &amp; anchor text</li>
+            <li data-i18n="feat4_l2">Anchor text &amp; crawlable links</li>
             <li data-i18n="feat4_l3">Broken-link detection</li>
           </ul>
         </div>
         <figure class="feature-shot">
           <span class="float-accent" aria-hidden="true"></span>
           <!-- TODO: drop real screenshot → web/assets/tab-links.png -->
-          <img class="shot" src="/assets/tab-links.png" alt="Inspect Links tab" data-i18n-alt="feat4_alt" />
+          <img class="shot" src="/assets/tab-links.png" alt="Inspect Links tab — link text, crawlable links, and broken-link audits" data-i18n-alt="feat4_alt" />
           <div class="shot-ph" hidden>
             <span class="shot-ph-tag">PNG</span>
             <span class="shot-ph-label" data-i18n="feat4_ph">Screenshot placeholder · drop assets/tab-links.png</span>
@@ -228,15 +235,15 @@
       </div>
     </section>
 
-    <!-- Why it's free — short trust line (corrected: SEOryon guides, it does NOT edit your site) -->
+    <!-- Why it's free — corrected: SEOryon shows the data & writes content; the user controls their site -->
     <section class="trust">
       <div class="trust-card reveal">
         <span class="trust-kicker" data-i18n="free_kicker">Why is it free?</span>
-        <p data-i18n="free_body">Because a clean page is the best ad for what SEOryon does next. Inspect shows you what's wrong on one page — and exactly how to fix it. SEOryon does the same across your whole site, continuously. No catch, no credit card, no account.</p>
+        <p data-i18n="free_body">Because the best ad for SEOryon is showing you what you're missing. Inspect flags what's wrong on one page and how to fix it. SEOryon does that across your whole site — then writes the blog content that lands you in Google and AI answers. We show you the data and write the content; you stay in control of your site.</p>
       </div>
     </section>
 
-    <!-- How it works — animated stepper -->
+    <!-- How it works — animated 1-2-3 stepper -->
     <section class="how" id="how">
       <h2 class="reveal" data-i18n="how_h2">How it works</h2>
       <div class="how-stepper reveal">
@@ -263,24 +270,39 @@
       </div>
     </section>
 
-    <!-- Use cases strip -->
+    <!-- Use cases — persona list (deliberately a different layout from the How-it-works cards) -->
     <section class="usecases">
       <h2 class="reveal" data-i18n="uc_h2">Built for the way you work</h2>
-      <div class="grid3">
-        <div class="card reveal" style="--rd:0">
-          <span class="uc-tag" data-i18n="uc1_tag">Agencies</span>
-          <h3 data-i18n="uc1_h3">Audit live on the call</h3>
-          <p data-i18n="uc1_p">Open a prospect's site mid-call and surface quick wins in seconds — no setup, no logins.</p>
+      <div class="persona-list">
+        <div class="persona reveal" style="--rd:0">
+          <span class="persona-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 21h18"/><path d="M8 13l3-3 2 2 3-4"/></svg>
+          </span>
+          <div class="persona-body">
+            <span class="persona-name" data-i18n="uc1_tag">Agencies</span>
+            <h3 data-i18n="uc1_h3">Audit live on the call</h3>
+            <p data-i18n="uc1_p">Open a prospect's site mid-call and surface quick wins in seconds — no setup, no logins.</p>
+          </div>
         </div>
-        <div class="card reveal" style="--rd:1">
-          <span class="uc-tag" data-i18n="uc2_tag">In-house marketers</span>
-          <h3 data-i18n="uc2_h3">Sanity-check before you ship</h3>
-          <p data-i18n="uc2_p">Catch missing meta, broken links, and bad canonicals before a page goes live.</p>
+        <div class="persona reveal" style="--rd:1">
+          <span class="persona-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 5V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M8.5 13l2 2 4-4"/></svg>
+          </span>
+          <div class="persona-body">
+            <span class="persona-name" data-i18n="uc2_tag">In-house marketers</span>
+            <h3 data-i18n="uc2_h3">Sanity-check before you ship</h3>
+            <p data-i18n="uc2_p">Catch missing meta, broken links, and bad canonicals before a page goes live.</p>
+          </div>
         </div>
-        <div class="card reveal" style="--rd:2">
-          <span class="uc-tag" data-i18n="uc3_tag">Developers</span>
-          <h3 data-i18n="uc3_h3">Debug without leaving the tab</h3>
-          <p data-i18n="uc3_p">Verify status codes, canonicals, and structured signals right where you work.</p>
+        <div class="persona reveal" style="--rd:2">
+          <span class="persona-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M13 6l-2 12"/></svg>
+          </span>
+          <div class="persona-body">
+            <span class="persona-name" data-i18n="uc3_tag">Developers</span>
+            <h3 data-i18n="uc3_h3">Debug without leaving the tab</h3>
+            <p data-i18n="uc3_p">Verify status codes, canonicals, and structured signals right where you work.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -288,9 +310,8 @@
     <!-- ============================================================
          Conversion section — the Oryon (paid) story.
          The signal-hub + AI-monitor animations sell the PAID product
-         and live ONLY here. NO real client stats anywhere — the
-         monitor is an illustrative product mockup; integrity block
-         (D) is the trust play.
+         and live ONLY here. NO real client stats — the monitor is an
+         illustrative product mockup; integrity block (D) is the trust play.
          ============================================================ -->
     <section class="convert" id="oryon">
       <!-- (A) Agent hook + radial signal hub -->
@@ -317,7 +338,7 @@
             <span class="hub-halo"></span>
             <span class="hub-ripple"></span>
             <span class="hub-ripple hub-ripple-2"></span>
-            <span class="hub-core-disc">Oryon</span>
+            <img class="hub-core-img" src="/seoryon-mark.svg" alt="" aria-hidden="true" />
           </div>
 
           <span class="hub-node-pos" style="left:50%;top:10%">
@@ -411,34 +432,114 @@
       <!-- (E) Final CTA — confident closing panel -->
       <div class="convert-cta reveal">
         <span class="cta-accent" aria-hidden="true"></span>
-        <h2 data-i18n="cv_e_h">Now run it across every page.</h2>
-        <p data-i18n="cv_e_sub">Start free. Keep full control the whole way.</p>
+        <h2 data-i18n="cv_e_h">Rank in Google. Get cited by AI.</h2>
+        <p data-i18n="cv_e_sub">SEOryon does the SEO and writes the content — you keep control of your site.</p>
         <a href="https://app.seoryon.com/signup?utm_source=inspect-tool&utm_medium=convert&utm_campaign=trial" class="btn-gradient btn-gradient-lg" data-i18n="cv_e_cta">Start your 30-day free trial →</a>
         <p class="microcopy" data-i18n="cv_e_fine">Articles written for you · Live LLM citation audit · Latest models · Cancel in two clicks.</p>
         <a href="#install" class="convert-secondary" data-i18n="cv_e_secondary">Or keep using Inspect free — it's yours forever.</a>
       </div>
     </section>
 
-    <!-- FAQ — near the bottom, above the footer -->
+    <!-- FAQ — comprehensive, grouped, with FAQPage JSON-LD (injected by app.js). At the bottom. -->
     <section class="faq" id="faq">
       <h2 class="reveal" data-i18n="faq_h2">Questions, answered</h2>
-      <div class="faq-list reveal">
-        <details class="faq-item">
-          <summary data-i18n="faq1_q">Is it really free?</summary>
-          <p data-i18n="faq1_a">Yes — Inspect is free forever. No trial timer, no credit card, no account. It's built by SEOryon as a genuinely useful front door to our paid platform.</p>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq2_q">Does my data leave my browser?</summary>
-          <p data-i18n="faq2_a">No. Inspect reads the page you're already viewing and runs every check locally in your browser. Nothing is uploaded to a server.</p>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq3_q">Which browsers are supported?</summary>
-          <p data-i18n="faq3_a">Chrome and any Chromium browser — Edge, Brave, Arc, and Opera. A Firefox build is on the roadmap.</p>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq4_q">How is it different from SEOryon?</summary>
-          <p data-i18n="faq4_a">Inspect audits one page, on demand, for free. SEOryon monitors your whole site continuously, tracks where you're cited across AI search, and writes the content that gets you ranked.</p>
-        </details>
+
+      <div class="faq-group reveal">
+        <h3 class="faq-group-title" data-i18n="faq_gA">The free Inspect extension</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq1_q">Is Inspect really free — forever?</summary>
+            <p data-i18n="faq1_a">Yes. No trial timer, no credit card, no account. Inspect is built by SEOryon as a genuinely useful front door to our paid platform.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq2_q">Does my data leave my browser?</summary>
+            <p data-i18n="faq2_a">No. Inspect reads the page you're already viewing and runs every check locally in your browser. Nothing is uploaded to a server.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq3_q">Which browsers are supported?</summary>
+            <p data-i18n="faq3_a">Chrome and any Chromium browser — Edge, Brave, Arc, and Opera. A Firefox build is on the roadmap.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq4_q">How is Inspect different from SEOryon?</summary>
+            <p data-i18n="faq4_a">Inspect audits one page, on demand, for free. SEOryon works across your whole site continuously, tracks where you're cited in AI search, and writes the content that gets you found.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group reveal">
+        <h3 class="faq-group-title" data-i18n="faq_gB">SEOryon vs. the alternatives</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq5_q">How is SEOryon different from a keyword tool or an AI writer?</summary>
+            <p data-i18n="faq5_a">Keyword tools hand you a list and stop; AI writers spit out generic text. SEOryon reads live search data, decides what's worth writing and why, then writes content built to rank — research and writing in one loop.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq6_q">Do I still need Ahrefs or Semrush?</summary>
+            <p data-i18n="faq6_a">Most teams don't. SEOryon tracks the rankings, competitors, backlinks, and site vitals those tools show — then acts on them by publishing content. Keep them if you like; SEOryon is built to replace the busywork.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq7_q">Why SEOryon instead of an agency or doing it manually?</summary>
+            <p data-i18n="faq7_a">An agency is slow and expensive; manual SEO eats your week. SEOryon runs the research-to-publish loop continuously at a fraction of the cost — and you approve everything.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group reveal">
+        <h3 class="faq-group-title" data-i18n="faq_gC">AI search &amp; GEO</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq8_q">What is GEO (generative engine optimization)?</summary>
+            <p data-i18n="faq8_a">GEO is optimizing to be cited in AI answers — ChatGPT, Perplexity, Gemini, Google AI — not just the ten blue links. As people ask AI instead of searching, being the source it quotes is the new front page.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq9_q">How do I get cited in ChatGPT, Perplexity, and Google AI?</summary>
+            <p data-i18n="faq9_a">Publish clear, well-structured, genuinely useful content that answers real questions — exactly what LLMs quote. SEOryon writes for that, and tracks where you're already being cited.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq10_q">How is ranking in AI answers different from ranking in Google?</summary>
+            <p data-i18n="faq10_a">Google ranks pages; AI answers cite sources inside a generated reply. The fundamentals overlap — quality, structure, authority — but AI rewards content that directly answers the question. SEOryon optimizes for both.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group reveal">
+        <h3 class="faq-group-title" data-i18n="faq_gD">Trust &amp; how it works</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq11_q">Is AI-written content penalized by Google?</summary>
+            <p data-i18n="faq11_a">No — Google rewards helpful content regardless of how it's made, and penalizes spam. SEOryon writes genuine, fact-grounded articles you review before publishing, not spun filler.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq12_q">Do you follow Google's rules?</summary>
+            <p data-i18n="faq12_a">Always. No black-hat tactics, no link-exchange pools, no spun content — only the fundamentals of good SEO, because that's the only growth that lasts.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq13_q">Do you edit or touch my website?</summary>
+            <p data-i18n="faq13_a">No. SEOryon shows you the data and writes the content; you publish and stay in full control of your own site. We never edit your site for you.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq14_q">Who controls what gets published?</summary>
+            <p data-i18n="faq14_a">You do. On semi-autopilot you approve every piece with one click; on full autopilot SEOryon publishes on your rules. Either way, nothing goes live without your say.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group reveal">
+        <h3 class="faq-group-title" data-i18n="faq_gE">Plans &amp; practical</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq15_q">What's included in the 30-day free trial?</summary>
+            <p data-i18n="faq15_a">Published articles written for you, an in-depth LLM citation audit, the latest models, and full access — cancel in two clicks.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq16_q">Semi-autopilot vs. full autopilot — what's the difference?</summary>
+            <p data-i18n="faq16_a">Semi proposes finished recommendations you approve or skip in a click, learning your taste over time. Full autopilot runs the whole loop end to end. Start on semi, hand over as much as you want.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq17_q">Which platforms and languages do you support?</summary>
+            <p data-i18n="faq17_a">SEOryon publishes to the major CMS platforms and writes across multiple languages and markets. Tell us your stack during the trial and we'll confirm the fit.</p>
+          </details>
+        </div>
       </div>
     </section>
 
