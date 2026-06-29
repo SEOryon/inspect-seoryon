@@ -12,10 +12,16 @@ file is ever missing, so the page never shows a broken image.
 | `tab-content.png`   | Feature row 3 — Content tab (Flesch + keywords)   | ✅ provided |
 | `tab-links.png`     | Feature row 4 — Links tab (Links Health)          | ✅ provided |
 | `tab-geo.png`       | Feature row 5 — GEO tab (AI-readiness + crawlers) | ✅ provided |
+| `tab-sitescan.png`  | Whole-site scan section — site-audit dashboard    | ✅ provided |
+| `tab-siteissues.png`| Whole-site scan — Site Issues list (OPTIONAL)     | ⬜ optional |
 
-All six were placed 2026-06-26 from the founder's captures (≈1850px-wide PNGs,
-retina-crisp). Frames apply the rounded corner + border + soft shadow and size
-to the image automatically (`.shot { width:100%; height:auto }`).
+The first six were placed 2026-06-26 from the founder's captures (≈1850px-wide
+PNGs, retina-crisp). `tab-sitescan.png` (the whole-site audit dashboard) was added
+for the marquee section. `tab-siteissues.png` is OPTIONAL — the section renders
+complete with just `tab-sitescan.png`; if `tab-siteissues.png` is absent, app.js
+hides that second figure (it's marked `data-optional`). Frames apply the rounded
+corner + border + soft shadow and size to the image automatically
+(`.shot { width:100%; height:auto }`).
 
 To refresh any shot, drop a new PNG here with the same filename — no code change
 needed. The hero reads best landscape (~16:9–16:10); tab shots can be any ratio.

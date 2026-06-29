@@ -162,6 +162,47 @@
       </p>
     </section>
 
+    <!-- ============================================================
+         Whole-site scan — the marquee capability (multi-page audit).
+         Standout card, on-brand. Headline is an <h2> (single H1 stays
+         in the hero). Uses the v9 wide-image treatment for the shot.
+         ============================================================ -->
+    <section class="sitescan reveal" id="sitescan">
+      <div class="sitescan-card">
+        <div class="sitescan-text">
+          <span class="sitescan-badge" data-i18n="ss_badge">New · Whole-site audit</span>
+          <h2 data-i18n="ss_h2">Audit your entire site — not just one page.</h2>
+          <p class="sitescan-sub" data-i18n="ss_sub">In one click, Inspect crawls your whole site — up to ~100 pages — right in your browser and gives you a full audit: a site score, health distributions, and every site-wide issue, each with the fix. It runs locally and free, no signup — nothing leaves your browser.</p>
+          <ul class="feature-list sitescan-list">
+            <li data-i18n="ss_l1">Broken internal links &amp; redirect chains</li>
+            <li data-i18n="ss_l2">Duplicate titles &amp; meta descriptions</li>
+            <li data-i18n="ss_l3">Orphan pages &amp; pages buried too deep</li>
+            <li data-i18n="ss_l4">Sitemap consistency — 404s, noindex, non-canonical</li>
+            <li data-i18n="ss_l5">Site score &amp; health dashboard — status codes, HTTPS, canonical, indexability, alt coverage</li>
+            <li data-i18n="ss_l6">Export the full audit as CSV or a shareable HTML report</li>
+          </ul>
+          <p class="sitescan-bridge" data-i18n="ss_bridge">Bigger site? SEOryon audits your entire site continuously.</p>
+        </div>
+        <div class="sitescan-shots">
+          <figure class="feature-shot sitescan-shot">
+            <span class="float-accent" aria-hidden="true"></span>
+            <!-- TODO: drop real screenshot → web/assets/tab-sitescan.png -->
+            <img class="shot" src="/assets/tab-sitescan.png" alt="Inspect whole-site audit — site score, health distributions, and grouped site issues" data-i18n-alt="ss_alt" />
+            <div class="shot-ph" hidden>
+              <span class="shot-ph-tag">PNG</span>
+              <span class="shot-ph-label" data-i18n="ss_ph">Screenshot placeholder · drop assets/tab-sitescan.png</span>
+            </div>
+          </figure>
+          <!-- Optional second screenshot (Site Issues). If the file is absent the
+               whole figure is hidden by app.js — the section stays complete with one. -->
+          <figure class="feature-shot sitescan-shot" data-optional>
+            <img class="shot" src="/assets/tab-siteissues.png" alt="Inspect Site Issues — broken links, duplicate titles, and orphan pages grouped by severity" data-i18n-alt="ss_alt2" />
+            <div class="shot-ph" hidden></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- Feature rows: each tab with a screenshot slot -->
     <section class="features" id="features">
       <h2 class="reveal" data-i18n="feat_h2">Everything you need to inspect, in one panel</h2>

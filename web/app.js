@@ -102,6 +102,20 @@
       feat5_alt: "Inspect GEO tab — AI-readiness score, crawler access, and structured data",
       feat5_ph: "Screenshot placeholder · drop assets/tab-geo.png",
 
+      ss_badge: "New · Whole-site audit",
+      ss_h2: "Audit your entire site — not just one page.",
+      ss_sub: "In one click, Inspect crawls your whole site — up to ~100 pages — right in your browser and gives you a full audit: a site score, health distributions, and every site-wide issue, each with the fix. It runs locally and free, no signup — nothing leaves your browser.",
+      ss_l1: "Broken internal links & redirect chains",
+      ss_l2: "Duplicate titles & meta descriptions",
+      ss_l3: "Orphan pages & pages buried too deep",
+      ss_l4: "Sitemap consistency — 404s, noindex, non-canonical",
+      ss_l5: "Site score & health dashboard — status codes, HTTPS, canonical, indexability, alt coverage",
+      ss_l6: "Export the full audit as CSV or a shareable HTML report",
+      ss_bridge: "Bigger site? SEOryon audits your entire site continuously.",
+      ss_alt: "Inspect whole-site audit — site score, health distributions, and grouped site issues",
+      ss_ph: "Screenshot placeholder · drop assets/tab-sitescan.png",
+      ss_alt2: "Inspect Site Issues — broken links, duplicate titles, and orphan pages grouped by severity",
+
       free_kicker: "Why is it free?",
       free_body: "Because the best ad for SEOryon is showing you what you’re missing. Inspect flags what’s wrong on one page and how to fix it. SEOryon does that across your whole site — then writes the blog content that lands you in Google and AI answers. We show you the data and write the content; you stay in control of your site.",
 
@@ -287,6 +301,20 @@
       feat5_alt: "Inspect-Tab „GEO“ – KI-Bereitschafts-Score, Crawler-Zugang und strukturierte Daten",
       feat5_ph: "Screenshot-Platzhalter · assets/tab-geo.png ablegen",
 
+      ss_badge: "Neu · Website-Audit",
+      ss_h2: "Prüfe deine ganze Website – nicht nur eine Seite.",
+      ss_sub: "Mit einem Klick crawlt Inspect deine ganze Website – bis zu ~100 Seiten – direkt in deinem Browser und liefert ein komplettes Audit: einen Website-Score, Gesundheits-Verteilungen und jedes seitenübergreifende Problem, jeweils mit der Lösung. Läuft lokal und kostenlos, ohne Anmeldung – nichts verlässt deinen Browser.",
+      ss_l1: "Defekte interne Links & Weiterleitungsketten",
+      ss_l2: "Doppelte Titles & Meta-Descriptions",
+      ss_l3: "Verwaiste & zu tief vergrabene Seiten",
+      ss_l4: "Sitemap-Konsistenz – 404s, noindex, nicht-kanonisch",
+      ss_l5: "Website-Score & Gesundheits-Dashboard – Statuscodes, HTTPS, Canonical, Indexierbarkeit, Alt-Abdeckung",
+      ss_l6: "Exportiere das komplette Audit als CSV oder als teilbaren HTML-Report",
+      ss_bridge: "Größere Website? SEOryon auditiert deine gesamte Website laufend.",
+      ss_alt: "Inspect Gesamt-Website-Audit – Website-Score, Gesundheits-Verteilungen und gruppierte Website-Probleme",
+      ss_ph: "Screenshot-Platzhalter · assets/tab-sitescan.png ablegen",
+      ss_alt2: "Inspect Website-Probleme – defekte Links, doppelte Titles und verwaiste Seiten nach Schweregrad gruppiert",
+
       free_kicker: "Warum ist es kostenlos?",
       free_body: "Weil die beste Werbung für SEOryon ist, dir zu zeigen, was dir entgeht. Inspect zeigt, was auf einer einzelnen Seite nicht stimmt – und wie du es behebst. SEOryon macht genau das für deine gesamte Website und schreibt dann die Blog-Inhalte, mit denen du in Google und in KI-Antworten auftauchst. Wir liefern die Daten und schreiben die Inhalte; die Kontrolle über deine Website bleibt bei dir.",
 
@@ -471,6 +499,20 @@
       feat5_l3: "Contenu citable & score de préparation IA, de 0 à 100",
       feat5_alt: "Onglet GEO d’Inspect — score de préparation IA, accès des robots et données structurées",
       feat5_ph: "Emplacement de capture · déposez assets/tab-geo.png",
+
+      ss_badge: "Nouveau · Audit de tout le site",
+      ss_h2: "Auditez tout votre site — pas seulement une page.",
+      ss_sub: "En un clic, Inspect explore tout votre site — jusqu'à ~100 pages — directement dans votre navigateur et vous livre un audit complet : un score de site, des répartitions de santé et chaque problème à l'échelle du site, avec la correction. Tout en local et gratuit, sans inscription — rien ne quitte votre navigateur.",
+      ss_l1: "Liens internes cassés & chaînes de redirection",
+      ss_l2: "Titles & méta-descriptions en double",
+      ss_l3: "Pages orphelines & trop profondes",
+      ss_l4: "Cohérence du sitemap — 404, noindex, non canonique",
+      ss_l5: "Score de site & tableau de bord de santé — codes de statut, HTTPS, canonique, indexabilité, couverture alt",
+      ss_l6: "Exportez l'audit complet en CSV ou en rapport HTML partageable",
+      ss_bridge: "Site plus grand ? SEOryon audite l'intégralité de votre site en continu.",
+      ss_alt: "Audit de tout le site Inspect — score de site, répartitions de santé et problèmes du site groupés",
+      ss_ph: "Espace réservé · déposer assets/tab-sitescan.png",
+      ss_alt2: "Problèmes du site Inspect — liens cassés, titles en double et pages orphelines groupés par gravité",
 
       free_kicker: "Pourquoi est-ce gratuit ?",
       free_body: "Parce que la meilleure publicité pour SEOryon, c’est de vous montrer ce qui vous échappe. Inspect signale ce qui ne va pas sur une page et comment le corriger. SEOryon fait la même chose sur l’ensemble de votre site, puis rédige les articles de blog qui vous placent dans Google et dans les réponses IA. Nous fournissons les données et écrivons le contenu ; vous, vous gardez la main sur votre site.",
@@ -687,13 +729,17 @@
   // Screenshot fallback: if a real PNG isn't present yet, swap the
   // <img> for its labeled placeholder sibling (no broken-image icon).
   document.querySelectorAll("img.shot").forEach((img) => {
-    const showPlaceholder = () => {
+    const optional = img.closest("[data-optional]");
+    const onMissing = () => {
+      // An optional shot (e.g. the secondary site-issues image) hides its whole
+      // figure when absent, so the section stays clean with just the primary shot.
+      if (optional) { optional.hidden = true; return; }
       img.style.display = "none";
       const ph = img.parentElement && img.parentElement.querySelector(".shot-ph");
       if (ph) ph.hidden = false;
     };
-    img.addEventListener("error", showPlaceholder);
-    if (img.complete && img.naturalWidth === 0) showPlaceholder();
+    img.addEventListener("error", onMissing);
+    if (img.complete && img.naturalWidth === 0) onMissing();
   });
 
   // Chrome CTA — while CHROME_STORE_URL is null the buttons are in the

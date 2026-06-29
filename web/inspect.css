@@ -208,6 +208,43 @@ main { max-width: 1240px; }
 .testimonial-card figcaption { font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--ink-muted); }
 
 /* ============================================================
+   Whole-site scan — marquee standout section (the headline capability)
+   ============================================================ */
+.sitescan { margin-top: 72px; }
+.sitescan-card {
+  position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1.45fr; gap: 48px; align-items: center;
+  background: var(--surface-card); border: 1px solid var(--surface-border);
+  border-radius: 22px; box-shadow: var(--shadow-card); padding: 40px;
+}
+/* animated brand-gradient top edge — signals "this is the marquee feature" */
+.sitescan-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--oryon-gradient); background-size: 200% 100%;
+  animation: gradient-flow 4s linear infinite;
+}
+.sitescan-card::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(120% 70% at 0% -10%, rgba(74, 53, 232, 0.05), transparent 60%);
+}
+.sitescan-text { position: relative; z-index: 1; }
+.sitescan-badge {
+  display: inline-block;
+  font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-on-brand);
+  background: var(--oryon-gradient); padding: 5px 11px; border-radius: 6px; margin-bottom: 16px;
+}
+.sitescan-text h2 {
+  font-family: 'Geist', sans-serif; font-weight: 800; font-size: 33px;
+  letter-spacing: -0.03em; line-height: 1.12; color: var(--ink-primary);
+  margin-bottom: 14px; max-width: 18ch;
+}
+.sitescan-sub { font-size: 16px; line-height: 1.6; color: var(--ink-secondary); margin-bottom: 18px; max-width: 56ch; }
+.sitescan-list { margin-bottom: 18px; }
+.sitescan-bridge { font-size: 14px; font-weight: 600; color: var(--brand-hover); }
+.sitescan-shots { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 16px; }
+
+/* ============================================================
    Feature rows
    ============================================================ */
 .features { margin-top: 96px; }
@@ -581,7 +618,7 @@ main { max-width: 1240px; }
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
   .js .reveal, .js .reveal.in { opacity: 1 !important; transform: none !important; transition: none !important; }
-  .float-accent, .hub-halo, .hub-ripple, .hub-core::after, .cta-accent, .mon-live .ping::before { animation: none !important; }
+  .float-accent, .hub-halo, .hub-ripple, .hub-core::after, .cta-accent, .sitescan-card::before, .mon-live .ping::before { animation: none !important; }
   .hub-line { stroke-dashoffset: 0 !important; animation: none !important; }
   .signal-hub.in .hub-node, .how-stepper.in .step-node { animation: none !important; opacity: 1 !important; }
   .js .signal-hub .hub-node { opacity: 1 !important; }
@@ -594,6 +631,8 @@ main { max-width: 1240px; }
    ============================================================ */
 @media (max-width: 860px) {
   .tabs-row { grid-template-columns: repeat(2, 1fr); }
+  .sitescan-card { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+  .sitescan-text h2 { max-width: none; }
   .feature-row,
   .feature-row:nth-child(even) { grid-template-columns: 1fr; gap: 20px; }
   .feature-row:nth-child(even) .feature-text,
@@ -609,6 +648,9 @@ main { max-width: 1240px; }
 }
 @media (max-width: 600px) {
   .features h2, .usecases h2, .faq h2, .how > h2 { font-size: 28px; }
+  .sitescan { margin-top: 56px; }
+  .sitescan-card { padding: 22px; border-radius: 18px; }
+  .sitescan-text h2 { font-size: 26px; }
   .testimonial-grid { grid-template-columns: 1fr; }
   .browser-row { margin-top: 18px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
