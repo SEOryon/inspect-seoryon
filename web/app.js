@@ -45,7 +45,7 @@
       cta_how: "See how it works →",
       hero_micro: "Works on any page you’re viewing · Chrome & Edge · Free forever — the install is the whole product.",
 
-      shot_hero_alt: "Inspect Chrome extension side panel showing a page's SEO score, GEO score, and audits",
+      shot_hero_alt: "Inspect Chrome extension side panel — a page's Page Score and GEO score",
       shot_hero_ph: "Screenshot placeholder — Inspect side panel · drop assets/panel-hero.png",
 
       tab1_name: "Technical", tab1_a1: "Crawlability", tab1_a2: "Hreflang", tab1_a3: "Viewport",
@@ -116,6 +116,7 @@
       ss_ph: "Screenshot placeholder · drop assets/tab-sitescan.png",
       ss_alt2: "Inspect Site Issues — broken links, duplicate titles, and orphan pages grouped by severity",
 
+      free_eyebrow: "Free, on purpose",
       free_kicker: "Why is it free?",
       free_body: "Because the best ad for SEOryon is showing you what you’re missing. Inspect flags what’s wrong on one page and how to fix it. SEOryon does that across your whole site — then writes the blog content that lands you in Google and AI answers. We show you the data and write the content; you stay in control of your site.",
 
@@ -244,7 +245,7 @@
       cta_how: "So funktioniert’s →",
       hero_micro: "Funktioniert auf jeder geöffneten Seite · Chrome & Edge · Für immer kostenlos – die Installation ist schon das ganze Produkt.",
 
-      shot_hero_alt: "Seitenleiste der Inspect-Erweiterung mit SEO-Score, GEO-Score und Audits einer Seite",
+      shot_hero_alt: "Seitenleiste der Inspect-Erweiterung – Page Score und GEO-Score einer Seite",
       shot_hero_ph: "Screenshot-Platzhalter – Inspect-Seitenleiste · assets/panel-hero.png ablegen",
 
       tab1_name: "Technik", tab1_a1: "Crawlbarkeit", tab1_a2: "Hreflang", tab1_a3: "Viewport",
@@ -315,6 +316,7 @@
       ss_ph: "Screenshot-Platzhalter · assets/tab-sitescan.png ablegen",
       ss_alt2: "Inspect Website-Probleme – defekte Links, doppelte Titles und verwaiste Seiten nach Schweregrad gruppiert",
 
+      free_eyebrow: "Bewusst kostenlos",
       free_kicker: "Warum ist es kostenlos?",
       free_body: "Weil die beste Werbung für SEOryon ist, dir zu zeigen, was dir entgeht. Inspect zeigt, was auf einer einzelnen Seite nicht stimmt – und wie du es behebst. SEOryon macht genau das für deine gesamte Website und schreibt dann die Blog-Inhalte, mit denen du in Google und in KI-Antworten auftauchst. Wir liefern die Daten und schreiben die Inhalte; die Kontrolle über deine Website bleibt bei dir.",
 
@@ -443,7 +445,7 @@
       cta_how: "Voir comment ça marche →",
       hero_micro: "Fonctionne sur toutes les pages que vous consultez · Chrome & Edge · Gratuit à vie — l’installation, c’est tout le produit.",
 
-      shot_hero_alt: "Panneau latéral de l’extension Chrome Inspect affichant le score SEO, le score GEO et les audits d’une page",
+      shot_hero_alt: "Panneau latéral de l’extension Chrome Inspect — le Page Score et le score GEO d’une page",
       shot_hero_ph: "Emplacement de capture — panneau Inspect · déposez assets/panel-hero.png",
 
       tab1_name: "Technique", tab1_a1: "Explorabilité", tab1_a2: "Hreflang", tab1_a3: "Viewport",
@@ -514,6 +516,7 @@
       ss_ph: "Espace réservé · déposer assets/tab-sitescan.png",
       ss_alt2: "Problèmes du site Inspect — liens cassés, titles en double et pages orphelines groupés par gravité",
 
+      free_eyebrow: "Gratuit, volontairement",
       free_kicker: "Pourquoi est-ce gratuit ?",
       free_body: "Parce que la meilleure publicité pour SEOryon, c’est de vous montrer ce qui vous échappe. Inspect signale ce qui ne va pas sur une page et comment le corriger. SEOryon fait la même chose sur l’ensemble de votre site, puis rédige les articles de blog qui vous placent dans Google et dans les réponses IA. Nous fournissons les données et écrivons le contenu ; vous, vous gardez la main sur votre site.",
 

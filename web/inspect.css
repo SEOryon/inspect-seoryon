@@ -310,11 +310,33 @@ main { max-width: 1240px; }
    ============================================================ */
 .trust { margin-top: 88px; }
 .trust-card {
-  background: var(--surface-section); border: 1px solid var(--surface-border);
-  border-radius: 16px; padding: 32px 36px; display: flex; flex-direction: column; gap: 10px;
+  position: relative; overflow: hidden;
+  background: var(--surface-card); border: 1px solid var(--surface-border);
+  border-radius: 20px; padding: 36px 40px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
+  box-shadow: var(--shadow-card);
 }
-.trust-kicker { font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.06em; color: var(--brand-primary); }
-.trust-card p { font-size: 18px; line-height: 1.55; color: var(--ink-primary); font-weight: 500; max-width: 720px; }
+/* gradient left accent bar — reads as a designed callout, on-brand */
+.trust-card::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 4px;
+  background: var(--oryon-gradient);
+}
+.trust-card::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(110% 80% at 100% -10%, rgba(74, 53, 232, 0.05), transparent 60%);
+}
+.trust-eyebrow {
+  position: relative;
+  display: inline-block; font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-on-brand);
+  background: var(--oryon-gradient); padding: 5px 11px; border-radius: 6px;
+}
+.trust-h {
+  position: relative;
+  font-family: 'Geist', sans-serif; font-weight: 800; font-size: 28px;
+  letter-spacing: -0.03em; line-height: 1.15; color: var(--ink-primary);
+}
+.trust-card p { position: relative; font-size: 17px; line-height: 1.6; color: var(--ink-secondary); max-width: 680px; }
 
 /* ============================================================
    How it works — animated stepper
@@ -353,11 +375,11 @@ main { max-width: 1240px; }
    ============================================================ */
 .usecases { margin-top: 88px; }
 .usecases h2 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: -0.03em; color: var(--ink-primary); margin-bottom: 24px; }
-.persona-list { display: grid; gap: 14px; max-width: 880px; }
+.persona-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .persona {
-  display: flex; align-items: flex-start; gap: 20px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
   background: var(--surface-card); border: 1px solid var(--surface-border);
-  border-radius: 16px; padding: 22px 24px;
+  border-radius: 16px; padding: 24px;
 }
 .persona-icon {
   flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px;
@@ -658,6 +680,8 @@ main { max-width: 1240px; }
   .tabs-row { grid-template-columns: 1fr 1fr; }
   .trust-card { padding: 24px; }
   .trust-card p { font-size: 16px; }
+  .trust-h { font-size: 23px; }
+  .persona-list { grid-template-columns: 1fr; }
   .lang-switch { order: -1; }
   .convert-lead h2, .convert-cta h2 { font-size: 28px; }
   .convert-see-text h2, .convert-integrity h2 { font-size: 24px; }
