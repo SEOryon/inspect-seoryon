@@ -140,6 +140,20 @@ main { max-width: 1240px; }
 .hero-shot .shot { display: block; width: 100%; height: auto; }
 .hero-shot .shot-ph { min-height: 380px; }
 
+/* ---- Two-column hero: copy on the left, product shot on the right ----
+   The composite mockup reads better at ~half width than full-bleed. Copy column
+   stays a touch narrower than the image; both min-width:0 so the grid can shrink
+   without overflow. Collapses to a single stacked column at <=860px (below). */
+.hero-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 56px;
+}
+.hero-top .hero-copy { min-width: 0; }
+/* In the two-col layout the grid gap owns the spacing — drop the shot's stacked margin. */
+.hero-top .hero-shot { margin: 0; min-width: 0; }
+
 .shot-ph {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 12px; text-align: center; min-height: 280px; padding: 40px;
@@ -652,6 +666,8 @@ main { max-width: 1240px; }
    Responsive — mirrors style.css breakpoints
    ============================================================ */
 @media (max-width: 860px) {
+  /* Hero stacks: copy first, then the product shot full-width below it. */
+  .hero-top { grid-template-columns: 1fr; gap: 32px; }
   .tabs-row { grid-template-columns: repeat(2, 1fr); }
   .sitescan-card { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
   .sitescan-text h2 { max-width: none; }
