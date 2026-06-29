@@ -6,7 +6,7 @@ file is ever missing, so the page never shows a broken image.
 
 | File                | Where it appears on the page                      | Status      |
 | ------------------- | ------------------------------------------------- | ----------- |
-| `panel-hero.png`    | Hero — Page Score + GEO paired dashboard          | ✅ provided |
+| `panel-hero.png`    | Hero — composite mockup (panel + audit cards)     | ✅ provided |
 | `tab-technical.png` | Feature row 1 — Technical tab (Indexability)      | ✅ provided |
 | `tab-meta.png`      | Feature row 2 — Meta tab (Meta Overview)          | ✅ provided |
 | `tab-content.png`   | Feature row 3 — Content tab (Flesch + keywords)   | ✅ provided |

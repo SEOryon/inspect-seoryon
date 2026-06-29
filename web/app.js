@@ -45,7 +45,7 @@
       cta_how: "See how it works →",
       hero_micro: "Works on any page you’re viewing · Chrome & Edge · Free forever — the install is the whole product.",
 
-      shot_hero_alt: "Inspect Chrome extension side panel — a page's Page Score and GEO score",
+      shot_hero_alt: "Inspect Chrome extension auditing a page — Page Score and GEO score, with content quality, links health, social preview, and whole-site audit panels",
       shot_hero_ph: "Screenshot placeholder — Inspect side panel · drop assets/panel-hero.png",
 
       tab1_name: "Technical", tab1_a1: "Crawlability", tab1_a2: "Hreflang", tab1_a3: "Viewport",
@@ -245,7 +245,7 @@
       cta_how: "So funktioniert’s →",
       hero_micro: "Funktioniert auf jeder geöffneten Seite · Chrome & Edge · Für immer kostenlos – die Installation ist schon das ganze Produkt.",
 
-      shot_hero_alt: "Seitenleiste der Inspect-Erweiterung – Page Score und GEO-Score einer Seite",
+      shot_hero_alt: "Die Inspect-Chrome-Erweiterung beim Audit einer Seite – Page Score und GEO-Score, mit Panels für Content-Qualität, Link-Gesundheit, Social-Vorschau und Whole-Site-Audit",
       shot_hero_ph: "Screenshot-Platzhalter – Inspect-Seitenleiste · assets/panel-hero.png ablegen",
 
       tab1_name: "Technik", tab1_a1: "Crawlbarkeit", tab1_a2: "Hreflang", tab1_a3: "Viewport",
@@ -445,7 +445,7 @@
       cta_how: "Voir comment ça marche →",
       hero_micro: "Fonctionne sur toutes les pages que vous consultez · Chrome & Edge · Gratuit à vie — l’installation, c’est tout le produit.",
 
-      shot_hero_alt: "Panneau latéral de l’extension Chrome Inspect — le Page Score et le score GEO d’une page",
+      shot_hero_alt: "L’extension Chrome Inspect auditant une page — Page Score et score GEO, avec des panneaux qualité du contenu, état des liens, aperçu social et audit du site entier",
       shot_hero_ph: "Emplacement de capture — panneau Inspect · déposez assets/panel-hero.png",
 
       tab1_name: "Technique", tab1_a1: "Explorabilité", tab1_a2: "Hreflang", tab1_a3: "Viewport",
