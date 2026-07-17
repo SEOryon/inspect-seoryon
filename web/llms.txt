@@ -1,0 +1,28 @@
+# SEOryon Inspect — SEO & GEO Inspector for Chrome
+
+> Free Chrome extension that audits any page's on-page SEO in one click —
+> technical, meta, content, and link signals, plus GEO (AI-search) readiness.
+> Meta-tag checker, broken-link checker, canonical and hreflang checks, and a
+> site-health dashboard. Runs locally in your browser, no signup. Built by
+> SEOryon.
+
+Inspect reads the page you are on and reports the signals that decide whether it
+can rank and whether AI search engines can cite it: crawlability, canonicals,
+hreflang, viewport, meta tags, headings, links, and image alt coverage. Analysis
+happens locally — nothing about the pages you inspect is sent to a server.
+
+## Docs
+
+- [Inspect](https://inspect.seoryon.com): the extension landing page and install
+- [How it works](https://inspect.seoryon.com/#how): what it checks and how to read the results
+- [Features](https://inspect.seoryon.com/#features): the full signal list, from technical SEO to GEO readiness
+- [FAQ](https://inspect.seoryon.com/#faq): scope, supported pages, and privacy
+- [Privacy](https://inspect.seoryon.com/privacy): what the extension does and does not access
+
+## Related tools
+
+- [AI Search Readiness Score](https://score.seoryon.com): score any URL 0–100 across 27 deterministic AI-search signals, with concrete fixes
+- [AI Citability Grader](https://cite.seoryon.com): paste text, get a citability score for whether AI engines will quote it
+- [SEO ROI calculator](https://roi.seoryon.com): what organic traffic is worth, in your numbers
+- [Schema & FAQ generator](https://schema.seoryon.com): build valid JSON-LD structured data from a simple form
+- [SEOryon](https://seoryon.com): the company behind these tools
