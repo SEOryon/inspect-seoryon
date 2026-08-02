@@ -24,6 +24,18 @@
   // ============================================================
   const CHROME_STORE_URL = "https://chromewebstore.google.com/detail/pkkjcnpdpflbgcpeaeggibkhhkkddoik";
 
+  // ============================================================
+  // APP — single source of truth for every link that points at the paid
+  // app (app.seoryon.com). The app isn't public yet, so every ".js-app-link"
+  // is neutralized (href="#", no navigation) instead of sending visitors to
+  // a premature signup flow.
+  //
+  // TODO (one-line revert): once app.seoryon.com is live, set APP_LIVE to
+  // true. That restores each link's real destination (from its
+  // data-live-href) and the trial CTA's real label. No other change needed.
+  // ============================================================
+  const APP_LIVE = false;
+
   const I18N = {
     en: {
       meta_title: "Inspect — Free SEO inspector extension for Chrome · SEOryon",
@@ -171,6 +183,7 @@
       cv_e_h: "Rank in Google. Get cited by AI.",
       cv_e_sub: "SEOryon does the SEO and writes the content — you keep control of your site.",
       cv_e_cta: "Start your 3-day free trial →",
+      cv_e_cta_soon: "Coming soon",
       cv_e_fine: "3-day free trial · 3 published articles · 1 in-depth LLM/GEO audit · Cancel in two clicks.",
       cv_e_secondary: "Or keep using Inspect free — it’s yours forever.",
 
@@ -371,6 +384,7 @@
       cv_e_h: "Ranke bei Google. Werde von der KI zitiert.",
       cv_e_sub: "SEOryon übernimmt das SEO und schreibt die Inhalte – die Kontrolle über deine Website behältst du.",
       cv_e_cta: "3 Tage kostenlos testen →",
+      cv_e_cta_soon: "Demnächst verfügbar",
       cv_e_fine: "3 Tage kostenlos testen · 3 veröffentlichte Artikel · 1 ausführliches LLM/GEO-Audit · In zwei Klicks kündbar.",
       cv_e_secondary: "Oder nutze Inspect einfach weiter – kostenlos und für immer.",
 
@@ -571,6 +585,7 @@
       cv_e_h: "Positionnez-vous sur Google. Faites-vous citer par l’IA.",
       cv_e_sub: "SEOryon fait le SEO et rédige le contenu — vous gardez la main sur votre site.",
       cv_e_cta: "Démarrer l’essai gratuit de 3 jours →",
+      cv_e_cta_soon: "Bientôt disponible",
       cv_e_fine: "Essai gratuit de 3 jours · 3 articles publiés · 1 audit LLM/GEO approfondi · Annulation en deux clics.",
       cv_e_secondary: "Ou continuez à utiliser Inspect gratuitement — il est à vous, pour toujours.",
 
@@ -668,8 +683,30 @@
     });
 
     applyChromeCta(dict);
+    applyAppGate(dict);
 
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) { /* ignore */ }
+  };
+
+  // Drive every link to the paid app from APP_LIVE. Until it's true, links
+  // are neutralized (href="#", no navigation) and the trial CTA reads
+  // "Coming soon"; the real destination is preserved in data-live-href so
+  // flipping the flag restores it verbatim. Runs on every apply().
+  const applyAppGate = (dict) => {
+    document.querySelectorAll(".js-app-link").forEach((el) => {
+      const liveHref = el.dataset.liveHref;
+      if (APP_LIVE) {
+        if (liveHref) el.setAttribute("href", liveHref);
+        el.classList.remove("is-soon");
+        el.removeAttribute("aria-disabled");
+        if (el.dataset.i18n && dict[el.dataset.i18n]) el.textContent = dict[el.dataset.i18n];
+      } else {
+        el.setAttribute("href", "#");
+        el.classList.add("is-soon");
+        el.setAttribute("aria-disabled", "true");
+        if (dict.cv_e_cta_soon && el.dataset.i18n === "cv_e_cta") el.textContent = dict.cv_e_cta_soon;
+      }
+    });
   };
 
   // Drive every "Add to Chrome" CTA from CHROME_STORE_URL. Until it's set, the
@@ -747,6 +784,18 @@
   document.querySelectorAll(".js-chrome").forEach((el) => {
     el.addEventListener("click", (e) => {
       if (!CHROME_STORE_URL || el.getAttribute("href") === "#") {
+        e.preventDefault();
+      }
+    });
+  });
+
+  // App links (logo, trial CTA, footer) — while APP_LIVE is false these are
+  // in the gated state (href="#"); swallow the click so they never navigate.
+  // Once APP_LIVE is true, href is the real app.seoryon.com link and this
+  // guard no-ops.
+  document.querySelectorAll(".js-app-link").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      if (!APP_LIVE || el.getAttribute("href") === "#") {
         e.preventDefault();
       }
     });
