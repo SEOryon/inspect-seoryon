@@ -20,13 +20,9 @@
   // registration), so every ".js-chrome" button shows a calm "Coming soon to
   // Chrome" state instead of a dead link.
   //
-  // TODO (one-line revert): once the listing is live, set CHROME_STORE_URL to
-  // its URL, e.g.
-  //   const CHROME_STORE_URL = "https://chromewebstore.google.com/detail/<id>";
-  // That flips every CTA back to a real "Add to Chrome — free" link (label +
-  // href + active styling). No other change needed.
+  // Listing is live — every CTA now points at the real Chrome Web Store page.
   // ============================================================
-  const CHROME_STORE_URL = null;
+  const CHROME_STORE_URL = "https://chromewebstore.google.com/detail/pkkjcnpdpflbgcpeaeggibkhhkkddoik";
 
   const I18N = {
     en: {
