@@ -34,7 +34,7 @@
   // true. That restores each link's real destination (from its
   // data-live-href) and the trial CTA's real label. No other change needed.
   // ============================================================
-  const APP_LIVE = false;
+  const APP_LIVE = true;
 
   const I18N = {
     en: {
